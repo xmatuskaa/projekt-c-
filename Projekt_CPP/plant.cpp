@@ -1,6 +1,6 @@
 #include "plant.h"
 
-plant::plant()
+Plant::Plant()
 {
 
 }

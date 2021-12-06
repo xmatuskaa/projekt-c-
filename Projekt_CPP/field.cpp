@@ -1,6 +1,6 @@
 #include "field.h"
 
-field::field()
+Field::Field()
 {
 
 }

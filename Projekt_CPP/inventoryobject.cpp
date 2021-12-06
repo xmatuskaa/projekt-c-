@@ -1,6 +1,6 @@
 #include "inventoryobject.h"
 
-inventoryobject::inventoryobject()
+InventoryObject::InventoryObject()
 {
 
 }

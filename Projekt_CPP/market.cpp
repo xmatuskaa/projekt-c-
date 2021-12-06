@@ -1,6 +1,6 @@
 #include "market.h"
 
-market::market()
+Market::Market()
 {
 
 }

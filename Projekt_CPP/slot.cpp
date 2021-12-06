@@ -1,6 +1,6 @@
 #include "slot.h"
 
-slot::slot()
+Slot::Slot()
 {
 
 }

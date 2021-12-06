@@ -1,6 +1,6 @@
 #include "mapobject.h"
 
-Object::Object()
+MapObject::MapObject()
 {
 
 }

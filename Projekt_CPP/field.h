@@ -1,11 +1,12 @@
 #ifndef FIELD_H
 #define FIELD_H
+#include <iostream>
+#include "mapobject.h"
 
-
-class field
+class Field : public MapObject
 {
 public:
-    field();
+    Field();
 };
 
 #endif // FIELD_H

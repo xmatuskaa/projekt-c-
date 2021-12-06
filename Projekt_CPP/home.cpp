@@ -1,6 +1,6 @@
 #include "home.h"
 
-home::home()
+Home::Home()
 {
 
 }

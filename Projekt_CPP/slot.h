@@ -2,10 +2,12 @@
 #define SLOT_H
 
 
-class slot
+class Slot
 {
+private:
+    int m_slotIndex;
 public:
-    slot();
+    Slot();
 };
 
 #endif // SLOT_H

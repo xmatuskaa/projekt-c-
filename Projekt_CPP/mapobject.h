@@ -2,10 +2,12 @@
 #define MAPOBJECT_H
 
 
-class Object
+class MapObject
 {
+private:
+int m_index;
 public:
-    Object();
+    MapObject();
 };
 
 #endif // MAPOBJECT_H

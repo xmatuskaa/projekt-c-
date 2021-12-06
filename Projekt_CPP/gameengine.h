@@ -4,8 +4,12 @@
 
 class GameEngine
 {
-public:
+private:
     GameEngine();
+    void drawDesk();
+public:
+    void game();
+
 };
 
 #endif // GAMEENGINE_H

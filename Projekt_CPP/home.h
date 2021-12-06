@@ -1,11 +1,11 @@
 #ifndef HOME_H
 #define HOME_H
+#include "mapobject.h"
 
-
-class home
+class Home:public MapObject
 {
 public:
-    home();
+    Home();
 };
 
 #endif // HOME_H

@@ -1,11 +1,11 @@
 #ifndef MARKET_H
 #define MARKET_H
+#include "mapobject.h"
 
-
-class market
+class Market:public MapObject
 {
 public:
-    market();
+    Market();
 };
 
 #endif // MARKET_H

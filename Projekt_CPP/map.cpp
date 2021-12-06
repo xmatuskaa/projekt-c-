@@ -1,6 +1,6 @@
 #include "map.h"
 
-map::map()
+Map::Map()
 {
 
 }

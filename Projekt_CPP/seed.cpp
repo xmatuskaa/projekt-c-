@@ -1,6 +1,6 @@
 #include "seed.h"
 
-seed::seed()
+Seed::Seed()
 {
 
 }

@@ -1,11 +1,11 @@
 #ifndef PLANT_H
 #define PLANT_H
+#include "mapobject.h"
 
-
-class plant
+class Plant:public MapObject
 {
 public:
-    plant();
+    Plant();
 };
 
 #endif // PLANT_H

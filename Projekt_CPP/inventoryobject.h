@@ -2,10 +2,10 @@
 #define INVENTORYOBJECT_H
 
 
-class inventoryobject
+class InventoryObject
 {
 public:
-    inventoryobject();
+    InventoryObject();
 };
 
 #endif // INVENTORYOBJECT_H
