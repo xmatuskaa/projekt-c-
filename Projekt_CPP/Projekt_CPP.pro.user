@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 5.84.0, 2021-12-06T17:26:44. -->
+<!-- Written by QtCreator 5.84.0, 2021-12-06T20:51:21. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -240,8 +240,9 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/stekl/Desktop/projekt-c--main/projekt-c--main/Projekt_CPP/Projekt_CPP.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/stekl/Desktop/projekt-c--main/projekt-c--main/Projekt_CPP/Projekt_CPP.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Projekt_CPP2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/stekl/Desktop/school/projekt-c--main/projekt-c--main/Projekt_CPP/Projekt_CPP.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/stekl/Desktop/school/projekt-c--main/projekt-c--main/Projekt_CPP/Projekt_CPP.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
