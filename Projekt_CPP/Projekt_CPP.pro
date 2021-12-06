@@ -5,7 +5,21 @@ QT += quick
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        main.cpp
+        errorlogger.cpp \
+        field.cpp \
+        filemanager.cpp \
+        gameengine.cpp \
+        home.cpp \
+        inventory.cpp \
+        inventoryobject.cpp \
+        main.cpp \
+        map.cpp \
+        mapobject.cpp \
+        market.cpp \
+        plant.cpp \
+        player.cpp \
+        seed.cpp \
+        slot.cpp
 
 RESOURCES += qml.qrc
 
@@ -19,3 +33,19 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+HEADERS += \
+    errorlogger.h \
+    field.h \
+    filemanager.h \
+    gameengine.h \
+    home.h \
+    inventory.h \
+    inventoryobject.h \
+    map.h \
+    mapobject.h \
+    market.h \
+    plant.h \
+    player.h \
+    seed.h \
+    slot.h
