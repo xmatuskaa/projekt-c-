@@ -3,6 +3,9 @@
 #include <iostream>
 #include "inventory.h"
 #include <QString>
+#include <QJsonDocument>
+#include <QJsonObject>
+
 
 class Player
 {
@@ -16,7 +19,8 @@ public:
     Player();
     Player(QString name,int money);
 
-
+    void read(const QJsonObject &json);
+    void write(QJsonObject &json);
 };
 
 #endif // PLAYER_H
