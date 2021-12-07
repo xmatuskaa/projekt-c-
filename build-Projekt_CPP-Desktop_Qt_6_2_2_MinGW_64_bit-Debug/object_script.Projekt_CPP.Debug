@@ -1,0 +1,17 @@
+debug/error.o
+debug/errorlogger.o
+debug/field.o
+debug/filemanager.o
+debug/gameengine.o
+debug/home.o
+debug/inventory.o
+debug/inventoryobject.o
+debug/main.o
+debug/map.o
+debug/mapobject.o
+debug/market.o
+debug/plant.o
+debug/player.o
+debug/seed.o
+debug/slot.o
+debug/qrc_qml.o
