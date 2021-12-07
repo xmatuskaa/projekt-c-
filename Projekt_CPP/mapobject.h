@@ -1,5 +1,6 @@
 #ifndef MAPOBJECT_H
 #define MAPOBJECT_H
+#include <QObject>
 
 
 class MapObject

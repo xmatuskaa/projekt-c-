@@ -2,6 +2,7 @@
 #define ERRORLOGGER_H
 #include <vector>
 #include "error.h"
+#include <QObject>
 
 class ErrorLogger
 {

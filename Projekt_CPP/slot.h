@@ -1,5 +1,6 @@
 #ifndef SLOT_H
 #define SLOT_H
+#include <QObject>
 
 
 class Slot
