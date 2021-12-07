@@ -20,7 +20,7 @@ public:
     Player(QString name,int money);
 
     void read(const QJsonObject &json);
-    void write(QJsonObject &json);
+    void write(QJsonObject &json) const;
 };
 
 #endif // PLAYER_H
