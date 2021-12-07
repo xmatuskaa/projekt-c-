@@ -1,14 +1,20 @@
 #ifndef GAMEENGINE_H
 #define GAMEENGINE_H
+#include <QObject>
 
 
-class GameEngine
+
+
+class GameEngine : public QObject
 {
-private:
-    GameEngine();
-    void drawDesk();
+        Q_OBJECT
 public:
-    void game();
+   explicit GameEngine(QObject *parent = nullptr);
+
+    Q_INVOKABLE void drawDesk();
+public:
+    Q_INVOKABLE void game();
+signals:
 
 };
 

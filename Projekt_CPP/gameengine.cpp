@@ -1,6 +1,14 @@
 #include "gameengine.h"
 
-GameEngine::GameEngine()
+GameEngine::GameEngine(QObject *parent) : QObject(parent)
 {
+
+}
+
+void GameEngine::drawDesk(){
+
+}
+
+void GameEngine::game(){
 
 }

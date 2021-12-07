@@ -1,6 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-
+#include <QQmlContext>
+#include "gameengine.h"
 
 int main(int argc, char *argv[])
 {
@@ -16,6 +17,10 @@ int main(int argc, char *argv[])
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
+
+        GameEngine gameEngine;
+ QQmlContext* context = engine.rootContext();
+context->setContextProperty("gameEngine", &gameEngine);
     engine.load(url);
 
     return app.exec();

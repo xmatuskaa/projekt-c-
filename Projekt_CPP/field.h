@@ -3,6 +3,7 @@
 #include <iostream>
 #include "mapobject.h"
 
+
 class Field : public MapObject
 {
 public:

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<RCC>
+    <qresource prefix="/">
+        <file alias="main.qml">../Projekt_CPP/main.qml</file>
+        <file alias="FarmPlot.qml">../Projekt_CPP/FarmPlot.qml</file>
+        <file alias="GameMap.qml">../Projekt_CPP/GameMap.qml</file>
+        <file alias="ItemSlot.qml">../Projekt_CPP/ItemSlot.qml</file>
+        <file alias="ItemBar.qml">../Projekt_CPP/ItemBar.qml</file>
+        <file alias="StatusBar.qml">../Projekt_CPP/StatusBar.qml</file>
+        <file alias="Seeds.json">../Projekt_CPP/Seeds.json</file>
+    </qresource>
+</RCC>

@@ -2,6 +2,7 @@
 #define SLOT_H
 
 
+
 class Slot
 {
 private:

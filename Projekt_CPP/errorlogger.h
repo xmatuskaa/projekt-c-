@@ -3,6 +3,7 @@
 #include <vector>
 #include "error.h"
 
+
 class ErrorLogger
 {
 private:

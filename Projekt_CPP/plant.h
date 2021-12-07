@@ -2,6 +2,7 @@
 #define PLANT_H
 #include "mapobject.h"
 
+
 class Plant:public MapObject
 {
 public:

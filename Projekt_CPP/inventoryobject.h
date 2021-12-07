@@ -2,6 +2,7 @@
 #define INVENTORYOBJECT_H
 
 
+
 class InventoryObject
 {
 public:

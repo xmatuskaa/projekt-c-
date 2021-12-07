@@ -3,6 +3,8 @@
 #include <iostream>
 #include "inventory.h"
 #include <QString>
+#include <QObject>
+
 
 class Player
 {

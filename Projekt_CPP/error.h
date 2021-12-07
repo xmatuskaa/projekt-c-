@@ -2,6 +2,7 @@
 #define ERROR_H
 #include <iostream>
 
+
 class Error
 {
 private:
