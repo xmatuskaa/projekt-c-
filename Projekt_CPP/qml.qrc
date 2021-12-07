@@ -8,5 +8,6 @@
         <file>StatusBar.qml</file>
         <file>Seeds.json</file>
         <file>Player.json</file>
+        <file>save.json</file>
     </qresource>
 </RCC>
