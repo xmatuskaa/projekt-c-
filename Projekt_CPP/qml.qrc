@@ -6,5 +6,6 @@
         <file>ItemSlot.qml</file>
         <file>ItemBar.qml</file>
         <file>StatusBar.qml</file>
+        <file>Seeds.json</file>
     </qresource>
 </RCC>
