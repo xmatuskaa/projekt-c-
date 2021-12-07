@@ -7,5 +7,6 @@
         <file>ItemBar.qml</file>
         <file>StatusBar.qml</file>
         <file>Seeds.json</file>
+        <file>Player.json</file>
     </qresource>
 </RCC>
