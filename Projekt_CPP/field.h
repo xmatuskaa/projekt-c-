@@ -2,7 +2,6 @@
 #define FIELD_H
 #include <iostream>
 #include "mapobject.h"
-#include <QObject>
 
 class Field : public MapObject
 {

@@ -2,11 +2,7 @@
 #define PLAYER_H
 #include <iostream>
 #include "inventory.h"
-<<<<<<< Updated upstream
 #include <QString>
-=======
-#include <QObject>
->>>>>>> Stashed changes
 
 class Player
 {

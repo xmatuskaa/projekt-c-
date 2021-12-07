@@ -2,7 +2,6 @@
 #define INVENTORY_H
 #include <vector>
 #include "seed.h"
-#include <QObject>
 
 class Inventory
 {

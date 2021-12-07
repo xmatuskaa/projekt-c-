@@ -1,7 +1,6 @@
 #ifndef FILEMANAGER_H
 #define FILEMANAGER_H
 #include <iostream>
-#include <QObject>
 
 class FileManager
 {

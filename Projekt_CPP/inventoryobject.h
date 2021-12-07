@@ -1,6 +1,5 @@
 #ifndef INVENTORYOBJECT_H
 #define INVENTORYOBJECT_H
-#include <QObject>
 
 
 class InventoryObject
