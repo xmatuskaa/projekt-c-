@@ -16,7 +16,8 @@ public:
 public:
 
     Q_INVOKABLE void game();
-
+    Q_INVOKABLE void movePlayer(QString where);
+    Q_INVOKABLE int  getPlayerPosition();
 //    const Player* createPlayer() const;
 
     void newGame();

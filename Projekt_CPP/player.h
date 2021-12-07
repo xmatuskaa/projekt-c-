@@ -13,6 +13,7 @@ private:
     QString m_name;
     Inventory* m_bag;
     int m_money;
+    int m_playerPosition=0;
     //int level;
 
 public:
@@ -23,6 +24,8 @@ public:
 
     void read(const QJsonObject &json);
     void write(QJsonObject &json) const;
+    int getPosition();
+    void setPosition(int pos);
 };
 
 #endif // PLAYER_H

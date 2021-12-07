@@ -63,3 +63,25 @@ void GameEngine::write(QJsonObject &json) const{
 
 
 };
+
+void GameEngine::movePlayer(QString where){
+if(where=="up"){
+
+    m_player->setPosition(m_player->getPosition()-20);
+}
+if(where=="down"){
+
+    m_player->setPosition(m_player->getPosition()+20);
+}
+if(where=="left"){
+
+    m_player->setPosition(m_player->getPosition()-1);
+}
+if(where=="right"){
+
+    m_player->setPosition(m_player->getPosition()+1);
+}
+}
+int GameEngine::getPlayerPosition(){
+    return m_player->getPosition();
+}

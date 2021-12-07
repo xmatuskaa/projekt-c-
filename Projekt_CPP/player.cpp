@@ -22,3 +22,10 @@ void Player::write(QJsonObject &json) const{
     json["name"] = m_name;
     json["money"] = m_money;
 };
+
+int Player::getPosition(){
+    return m_playerPosition;
+}
+void Player::setPosition(int pos){
+    m_playerPosition=pos;
+}

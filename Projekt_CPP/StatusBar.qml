@@ -8,7 +8,7 @@ color: "darkorange"
 Text {
     property int day: 0
     id: dayCounter
-    text: "Day: " + String(day)
+    text:"Day: " + String(day)
     anchors.bottom: parent.bottom
     font {
         pixelSize: 20
@@ -18,7 +18,7 @@ Text {
 Text {
     property int money: 0
     id: moneyCounter
-    text: "Money: " + String(money)
+    text:"Money: " + String(money)
     anchors.right: parent.right
     anchors.bottom: parent.bottom
     font {
