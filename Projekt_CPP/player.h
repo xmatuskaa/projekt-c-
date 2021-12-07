@@ -19,6 +19,8 @@ public:
     Player();
     Player(QString name,int money);
 
+    Inventory* createBag();
+
     void read(const QJsonObject &json);
     void write(QJsonObject &json) const;
 };

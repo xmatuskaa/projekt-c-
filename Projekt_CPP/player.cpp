@@ -5,6 +5,12 @@ Player::Player()
 
 }
 
+    Inventory* Player::createBag(){
+    Inventory* bag = new Inventory();
+    m_bag = bag;
+    return bag;
+};
+
 void Player::read(const QJsonObject &json){
     if (json.contains("name") && json["name"].isString())
         m_name = json["name"].toString();
