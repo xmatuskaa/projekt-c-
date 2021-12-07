@@ -1,6 +1,9 @@
 #ifndef INVENTORY_H
 #define INVENTORY_H
 #include <vector>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QJsonObject>
 #include "seed.h"
 
 
@@ -12,6 +15,10 @@ private:
 
 public:
     Inventory();
+
+    void setSeed(std::vector<Seed*> seedVector);
+    void read(const QJsonObject &json);
+    void write(QJsonObject &json);
 };
 
 #endif // INVENTORY_H
