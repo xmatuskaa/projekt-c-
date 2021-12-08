@@ -14,8 +14,8 @@ Rectangle {
 
         FarmPlot{
             plotIndex: index
-            state: "s_Grass"
-            }
+            state: gameEngine.getState(index);
+                     }
         }
     }
 }

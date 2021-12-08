@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_GameEngine_t {
-    const uint offsetsAndSize[16];
-    char stringdata0[73];
+    const uint offsetsAndSize[22];
+    char stringdata0[108];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_GameEngine_t, stringdata0) + ofs), len 
@@ -36,12 +36,15 @@ QT_MOC_LITERAL(26, 4), // "game"
 QT_MOC_LITERAL(31, 17), // "getPlayerPosition"
 QT_MOC_LITERAL(49, 10), // "movePlayer"
 QT_MOC_LITERAL(60, 5), // "where"
-QT_MOC_LITERAL(66, 6) // "fields"
+QT_MOC_LITERAL(66, 8), // "getState"
+QT_MOC_LITERAL(75, 5), // "index"
+QT_MOC_LITERAL(81, 9), // "getFields"
+QT_MOC_LITERAL(91, 16) // "std::vector<int>"
 
     },
     "GameEngine\0fieldsChanged\0\0game\0"
     "getPlayerPosition\0movePlayer\0where\0"
-    "fields"
+    "getState\0index\0getFields\0std::vector<int>"
 };
 #undef QT_MOC_LITERAL
 
@@ -51,20 +54,21 @@ static const uint qt_meta_data_GameEngine[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
-       1,   44, // properties
+       5,   14, // methods
+       1,   53, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   38,    2, 0x06,    2 /* Public */,
+       1,    0,   44,    2, 0x06,    2 /* Public */,
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,   39,    2, 0x02,    3 /* Public */,
-       4,    0,   40,    2, 0x02,    4 /* Public */,
-       5,    1,   41,    2, 0x02,    5 /* Public */,
+       3,    0,   45,    2, 0x02,    3 /* Public */,
+       4,    0,   46,    2, 0x02,    4 /* Public */,
+       5,    1,   47,    2, 0x02,    5 /* Public */,
+       7,    1,   50,    2, 0x02,    7 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -73,9 +77,10 @@ static const uint qt_meta_data_GameEngine[] = {
     QMetaType::Void,
     QMetaType::Int,
     QMetaType::Void, QMetaType::QString,    6,
+    QMetaType::QString, QMetaType::Int,    8,
 
  // properties: name, type, flags
-       7, QMetaType::QVariant, 0x00015001, uint(0), 0,
+       9, 0x80000000 | 10, 0x00015009, uint(0), 0,
 
        0        // eod
 };
@@ -91,6 +96,8 @@ void GameEngine::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: { int _r = _t->getPlayerPosition();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         case 3: _t->movePlayer((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 4: { QString _r = _t->getState((*reinterpret_cast< int(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -109,7 +116,7 @@ void GameEngine::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         (void)_t;
         void *_v = _a[0];
         switch (_id) {
-        case 0: *reinterpret_cast< QVariant*>(_v) = _t->getFields(); break;
+        case 0: *reinterpret_cast< std::vector<int>*>(_v) = _t->getFields(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -126,9 +133,9 @@ const QMetaObject GameEngine::staticMetaObject = { {
     qt_static_metacall,
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_GameEngine_t
-, QtPrivate::TypeAndForceComplete<QVariant, std::true_type>, QtPrivate::TypeAndForceComplete<GameEngine, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<std::vector<int>, std::true_type>, QtPrivate::TypeAndForceComplete<GameEngine, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
 
 >,
     nullptr
@@ -154,13 +161,13 @@ int GameEngine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
 #ifndef QT_NO_PROPERTIES
     else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty

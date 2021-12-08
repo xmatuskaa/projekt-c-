@@ -13,7 +13,7 @@ private:
     QString m_name;
     Inventory* m_bag;
     int m_money;
-    int m_playerPosition=0;
+    int m_playerPosition=30;
     //int level;
 
 public:

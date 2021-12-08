@@ -2,7 +2,8 @@
 
 GameEngine::GameEngine(QObject *parent) : QObject(parent)
 {
-
+m_player = new Player;
+m_fields = FileManager::loadXml();
 }
 
 //void GameEngine::drawDesk(){
@@ -80,13 +81,22 @@ if(where=="left"){
 if(where=="right"){
 
     m_player->setPosition(m_player->getPosition()+1);
+    //zmenit hodnotu v xmlku na 1
+    emit fieldsChanged();
 }
 }
 int GameEngine::getPlayerPosition(){
     return m_player->getPosition();
 }
 
-QVariant GameEngine::getFields(){
+std::vector<int> GameEngine::getFields(){
+m_fields = FileManager::loadXml();
+return m_fields;
+}
 
-
+QString GameEngine::getState(int index){
+  std::vector<int>  field = getFields();
+    if(field.at(index)==1) return "s_Player";
+    if(field.at(index)==2) return "s_FarmField";
+    else return "s_Grass";
 }

@@ -45,6 +45,7 @@ Window {
             if (event.key === Qt.Key_Down){
                 gameEngine.movePlayer("down");
                 event.accepted = true;
+                console.log(gameEngine.getPlayerPosition)
                     }
             }
         }

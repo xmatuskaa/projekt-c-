@@ -51,3 +51,6 @@ HEADERS += \
     player.h \
     seed.h \
     slot.h
+
+DISTFILES += \
+    save.xml

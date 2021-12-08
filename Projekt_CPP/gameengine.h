@@ -4,12 +4,14 @@
 #include <QFile>
 #include <player.h>
 #include <inventory.h>
+#include <vector>
+#include "filemanager.h"
 
 class GameEngine : public QObject
 {
         Q_OBJECT
 
-    Q_PROPERTY(QVariant fields READ getFields NOTIFY fieldsChanged)
+    Q_PROPERTY(std::vector<int> getFields READ getFields NOTIFY fieldsChanged)
 public:
 
    explicit GameEngine(QObject *parent = nullptr);
@@ -19,6 +21,7 @@ public:
     Q_INVOKABLE void game();
     Q_INVOKABLE int  getPlayerPosition();
     Q_INVOKABLE  void movePlayer(QString where);
+    Q_INVOKABLE QString getState(int index);
 //    const Player* createPlayer() const;
 
     void newGame();
@@ -26,7 +29,7 @@ public:
     bool saveGame();
     void read(const QJsonObject &json);
     void write(QJsonObject &json) const;
-    QVariant getFields();
+    std::vector<int> getFields();
 
 signals:
     void fieldsChanged();
@@ -35,7 +38,7 @@ public slots:
 private:
     Player* m_player;
 
-    QVariant* fields;
+    std::vector<int> m_fields;
     QList<Seed> seeds;
     Inventory* inventory;
 

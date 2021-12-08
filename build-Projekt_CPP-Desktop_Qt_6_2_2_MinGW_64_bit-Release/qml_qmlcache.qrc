@@ -8,5 +8,8 @@
         <file alias="ItemBar.qml">../Projekt_CPP/ItemBar.qml</file>
         <file alias="StatusBar.qml">../Projekt_CPP/StatusBar.qml</file>
         <file alias="Seeds.json">../Projekt_CPP/Seeds.json</file>
+        <file alias="Player.json">../Projekt_CPP/Player.json</file>
+        <file alias="save.json">../Projekt_CPP/save.json</file>
+        <file alias="save.xml">../Projekt_CPP/save.xml</file>
     </qresource>
 </RCC>

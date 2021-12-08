@@ -25,7 +25,7 @@ FileManager::FileManager()
 //};
 
 std::vector<int> FileManager::loadXml(){
-    std::vector<int> slot(36, 0);
+    std::vector<int> slot(400, 0);
 
     QFile file(":/save.xml");
     if (file.open(QIODevice::ReadOnly)){
@@ -53,7 +53,7 @@ std::vector<int> FileManager::loadXml(){
             xmlReader.readNext();
         }
     } else {
-        qCritical() << "Soubor se nepovedlo otevrit\n";
+        qCritical() << "Soubor se nepovedlo otevritttt\n";
     }
 
     return slot;

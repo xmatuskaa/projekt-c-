@@ -14,12 +14,12 @@ debug/plant.o
 debug/player.o
 debug/seed.o
 debug/slot.o
-debug/GameMap_qml.o
-debug/FarmPlot_qml.o
 debug/StatusBar_qml.o
-debug/main_qml.o
 debug/ItemSlot_qml.o
 debug/ItemBar_qml.o
+debug/GameMap_qml.o
+debug/FarmPlot_qml.o
+debug/main_qml.o
 debug/qmlcache_loader.o
 debug/qrc_qml_qmlcache.o
 debug/moc_gameengine.o

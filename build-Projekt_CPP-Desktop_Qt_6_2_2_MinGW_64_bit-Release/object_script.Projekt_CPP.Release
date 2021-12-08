@@ -14,12 +14,12 @@ release/plant.o
 release/player.o
 release/seed.o
 release/slot.o
-release/GameMap_qml.o
-release/FarmPlot_qml.o
 release/StatusBar_qml.o
-release/main_qml.o
 release/ItemSlot_qml.o
 release/ItemBar_qml.o
+release/GameMap_qml.o
+release/FarmPlot_qml.o
+release/main_qml.o
 release/qmlcache_loader.o
 release/qrc_qml_qmlcache.o
 release/moc_gameengine.o
