@@ -11,5 +11,7 @@
         <file alias="Player.json">../Projekt_CPP/Player.json</file>
         <file alias="save.json">../Projekt_CPP/save.json</file>
         <file alias="save.xml">../Projekt_CPP/save.xml</file>
+        <file alias="PlayerPlot.qml">../Projekt_CPP/PlayerPlot.qml</file>
+        <file alias="Images/player2.png">../Projekt_CPP/Images/player2.png</file>
     </qresource>
 </RCC>

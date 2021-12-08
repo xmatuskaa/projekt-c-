@@ -11,19 +11,22 @@ Rectangle {
         rows: 20
         Repeater{
         model: 20*20
-
-
-
         FarmPlot{
             plotIndex: index
             state: gameEngine.getState(index);
-            
                      }
-        PlayerPlot{
-            plotIndex: index
-            state: "s_Empty"//gameEngine.getPlayerPosition(index);
-
-        }
         }
     }
+    Grid{
+        id: playerGrid
+        rows: 20
+        Repeater{
+        model: 20*20
+        PlayerPlot{
+            plotIndex: index
+            state:gameEngine.getPlayerPosition(index);
+
+                 }
+            }
+        }
 }

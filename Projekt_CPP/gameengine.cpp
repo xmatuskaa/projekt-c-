@@ -82,11 +82,12 @@ if(where=="right"){
 
     m_player->setPosition(m_player->getPosition()+1);
     //zmenit hodnotu v xmlku na 1
-    emit fieldsChanged();
+
 }
+ emit playerPositionChanged();
 }
 QString GameEngine::getPlayerPosition(int index){
-    if (index == m_player->getPosition()){
+    if (index == getPositionNumber()){
         return "s_Player";
     }
     else {
@@ -104,4 +105,7 @@ QString GameEngine::getState(int index){
     if(field.at(index)==1) return "s_Player";
     if(field.at(index)==2) return "s_FarmField";
     else return "s_Grass";
+}
+int GameEngine::getPositionNumber(){
+    return m_player->getPosition();
 }

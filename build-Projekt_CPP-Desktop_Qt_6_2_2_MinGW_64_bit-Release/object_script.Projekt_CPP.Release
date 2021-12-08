@@ -14,6 +14,7 @@ release/plant.o
 release/player.o
 release/seed.o
 release/slot.o
+release/PlayerPlot_qml.o
 release/StatusBar_qml.o
 release/ItemSlot_qml.o
 release/ItemBar_qml.o

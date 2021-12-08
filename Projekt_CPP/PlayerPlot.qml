@@ -5,10 +5,10 @@ Rectangle {
     id: playerPlot
     width: 40
     height: 40
-
+    color: "transparent"
     Image {
     id: playerImage
-    source: ":/Images/player2.png"
+    source: "Images/player2.png"
     width: parent.width
     height: parent.height
     anchors.centerIn: parent
