@@ -9,12 +9,17 @@ Seed::Seed(QString name, int cost){
     m_cost = cost;
 };
 
-void Seed::read(const QJsonObject &json){
-    m_name = json["name"].toString();
-    m_cost = json["cost"].toInt();
+void Seed::setName(QString name){
+    m_name = name;
+};
+void Seed::setCost(int cost){
+   m_cost = cost;
+};
+QString Seed::getName(){
+    return m_name;
+};
+int Seed::getCost(){
+    return m_cost;
 };
 
-void Seed::write(QJsonObject &json)const{
-    json["name"] = m_name;
-    json["cost"] = m_cost;
-};
+
