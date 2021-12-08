@@ -16,6 +16,7 @@ private:
 public:
        FileManager();
        static std::vector<int>loadXml();
+       static void writeToXml(int index, int number);
 
 //    bool loadGame();
 //    bool saveGame();
