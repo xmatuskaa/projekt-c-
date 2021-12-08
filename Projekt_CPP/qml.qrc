@@ -10,5 +10,6 @@
         <file>Player.json</file>
         <file>save.json</file>
         <file>save.xml</file>
+        <file>PlayerPlot.qml</file>
     </qresource>
 </RCC>

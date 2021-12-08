@@ -15,6 +15,13 @@ Rectangle {
     height: parent.height
     anchors.centerIn: parent
     }
+    Image {
+    id: playerImage
+    source: "fotka toho hrace"
+    width: parent.width
+    height: parent.height
+    anchors.centerIn: parent
+    }
 
     //border.color: "black"
     Text {
@@ -36,15 +43,15 @@ Rectangle {
             target: farmPlot
             color: "brown"
              }
-        },
-        State{
+        }
+        /*State{
         name: "s_Player"
         PropertyChanges {
             target: plotImage
             source: "images/player2.png"
              }
 
-        }
+        }*/
     ]
 
 }

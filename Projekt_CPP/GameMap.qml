@@ -12,9 +12,15 @@ Rectangle {
         Repeater{
         model: 20*20
 
+        PlayerPlot{
+            plotIndex: index
+
+        }
+
         FarmPlot{
             plotIndex: index
             state: gameEngine.getState(index);
+            
                      }
         }
     }
