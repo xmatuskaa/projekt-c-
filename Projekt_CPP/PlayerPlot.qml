@@ -13,7 +13,18 @@ Rectangle {
     height: parent.height
     anchors.centerIn: parent
     }
+    Connections{
+    target: gameEngine
+    function onPlayerPositionChanged(){
+     state:if(gameEngine.getPositionNumber===index){
+            return "s_Player";
+             }
+             else {
+                 return "s_Empty";
+             }//gameEngine.getPlayerPosition(index);
 
+            }
+    }
     states:[
         State{
             name: "s_Empty"

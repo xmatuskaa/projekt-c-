@@ -17,7 +17,7 @@ m_fields = FileManager::loadXml();
 //};
 
 void GameEngine::game(){
-m_player = new Player;
+
 }
 
 
@@ -80,27 +80,27 @@ void GameEngine::write(QJsonObject &json) const{
 
 void GameEngine::movePlayer(QString where){
 if(where=="up"){
-
-    m_player->setPosition(m_player->getPosition()-20);
+   m_position-=20;
+   emit playerPositionChanged();
 }
 if(where=="down"){
-
-    m_player->setPosition(m_player->getPosition()+20);
+    m_position+=20;
+    emit playerPositionChanged();
 }
 if(where=="left"){
-
-    m_player->setPosition(m_player->getPosition()-1);
+    m_position-=1;
+    emit playerPositionChanged();
 }
 if(where=="right"){
-
-    m_player->setPosition(m_player->getPosition()+1);
+   m_position+=1;
+   emit playerPositionChanged();
     //zmenit hodnotu v xmlku na 1
+}
+qCritical() << m_position <<"\n";
+}
 
-}
- emit playerPositionChanged();
-}
 QString GameEngine::getPlayerPosition(int index){
-    if (index == getPositionNumber()){
+    if (index == m_position){
         return "s_Player";
     }
     else {
@@ -115,10 +115,10 @@ return m_fields;
 
 QString GameEngine::getState(int index){
   std::vector<int>  field = getFields();
-    if(field.at(index)==1) return "s_Player";
     if(field.at(index)==2) return "s_FarmField";
     else return "s_Grass";
 }
 int GameEngine::getPositionNumber(){
-    return m_player->getPosition();
+    return m_position;
 }
+

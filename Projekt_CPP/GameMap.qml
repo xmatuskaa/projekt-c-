@@ -24,9 +24,15 @@ Rectangle {
         model: 20*20
         PlayerPlot{
             plotIndex: index
-            state:gameEngine.getPlayerPosition(index);
+            state:/*if(gameEngine.getPositionNumber===index){
+                     return "s_Player";
+                      }
+                      else {
+                          return "s_Empty";
+                      }*/gameEngine.getPlayerPosition(index);
 
+                    }
                  }
             }
         }
-}
+
