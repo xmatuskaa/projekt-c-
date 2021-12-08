@@ -9,5 +9,6 @@
         <file>Seeds.json</file>
         <file>Player.json</file>
         <file>save.json</file>
+        <file>save.xml</file>
     </qresource>
 </RCC>

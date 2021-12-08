@@ -1,6 +1,7 @@
 #ifndef FILEMANAGER_H
 #define FILEMANAGER_H
 #include <gameengine.h>
+#include <vector>
 #include <player.h>
 #include <inventory.h>
 #include <QFile>
@@ -12,6 +13,7 @@ private:
     std::string m_file;
 public:
        FileManager();
+       static std::vector<int>loadJson();
 
 //    bool loadGame();
 //    bool saveGame();

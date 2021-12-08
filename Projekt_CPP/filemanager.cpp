@@ -23,3 +23,7 @@ FileManager::FileManager()
 //void FileManager::read(const QJsonObject){
 
 //};
+
+/*std::vector<int> FileManager::loadJson(){
+    QFile(":/save.json")
+}*/
