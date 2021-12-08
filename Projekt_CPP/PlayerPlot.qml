@@ -8,7 +8,7 @@ Rectangle {
 
     Image {
     id: playerImage
-    source: "images/player2.png"
+    source: ":/Images/player2.png"
     width: parent.width
     height: parent.height
     anchors.centerIn: parent

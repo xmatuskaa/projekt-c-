@@ -85,8 +85,13 @@ if(where=="right"){
     emit fieldsChanged();
 }
 }
-int GameEngine::getPlayerPosition(){
-    return m_player->getPosition();
+QString GameEngine::getPlayerPosition(int index){
+    if (index == m_player->getPosition()){
+        return "s_Player";
+    }
+    else {
+        return "s_Empty";
+    }
 }
 
 std::vector<int> GameEngine::getFields(){

@@ -19,7 +19,7 @@ public:
 //    Q_INVOKABLE void drawDesk()
 
     Q_INVOKABLE void game();
-    Q_INVOKABLE int  getPlayerPosition();
+    Q_INVOKABLE QString  getPlayerPosition(int index);
     Q_INVOKABLE  void movePlayer(QString where);
     Q_INVOKABLE QString getState(int index);
 //    const Player* createPlayer() const;
