@@ -11,7 +11,7 @@ class Inventory
 {
 private:
     int m_capacity;
-    std::vector <Seed*> m_inventory;
+    std::vector <Seed*> m_seeds;
 
 public:
     Inventory();

@@ -9,11 +9,6 @@ class Seed: InventoryObject
 public:
     Seed();
     Seed(QString name, int cost);
-
-    void read(const QJsonObject &json);
-    void write(QJsonObject &json)const;
-
-private:
     int m_cost;
     QString m_name;
 };
