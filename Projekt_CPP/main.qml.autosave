@@ -6,6 +6,8 @@ Window {
     height: 1080
     visible: true
     title: qsTr("Farm")
+    
+    Player
 
     GameMap{
         id:gameMap
@@ -31,8 +33,8 @@ Window {
             console.log("ahooojj");
             if (event.key === Qt.Key_Right) {
                 gameEngine.movePlayer("right");
-                var position= gameEngine.getPlayerPosition
-                if(plotIndex==position) farmPlot.state = "s_FarmField";
+//                var position= gameEngine.getPlayerPosition
+//                if(plotIndex==position) farmPlot.state = "s_FarmField";
             }
         }
     }
