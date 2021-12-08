@@ -16,7 +16,7 @@ GameEngine::GameEngine(QObject *parent) : QObject(parent)
 //};
 
 void GameEngine::game(){
-
+m_player = new Player;
 }
 
 

@@ -32,13 +32,13 @@ static const qt_meta_stringdata_GameEngine_t qt_meta_stringdata_GameEngine = {
 QT_MOC_LITERAL(0, 10), // "GameEngine"
 QT_MOC_LITERAL(11, 4), // "game"
 QT_MOC_LITERAL(16, 0), // ""
-QT_MOC_LITERAL(17, 10), // "movePlayer"
-QT_MOC_LITERAL(28, 5), // "where"
-QT_MOC_LITERAL(34, 17) // "getPlayerPosition"
+QT_MOC_LITERAL(17, 17), // "getPlayerPosition"
+QT_MOC_LITERAL(35, 10), // "movePlayer"
+QT_MOC_LITERAL(46, 5) // "where"
 
     },
-    "GameEngine\0game\0\0movePlayer\0where\0"
-    "getPlayerPosition"
+    "GameEngine\0game\0\0getPlayerPosition\0"
+    "movePlayer\0where"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,13 +57,13 @@ static const uint qt_meta_data_GameEngine[] = {
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,   32,    2, 0x02,    1 /* Public */,
-       3,    1,   33,    2, 0x02,    2 /* Public */,
-       5,    0,   36,    2, 0x02,    4 /* Public */,
+       3,    0,   33,    2, 0x02,    2 /* Public */,
+       4,    1,   34,    2, 0x02,    3 /* Public */,
 
  // methods: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    4,
     QMetaType::Int,
+    QMetaType::Void, QMetaType::QString,    5,
 
        0        // eod
 };
@@ -75,9 +75,9 @@ void GameEngine::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         (void)_t;
         switch (_id) {
         case 0: _t->game(); break;
-        case 1: _t->movePlayer((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 2: { int _r = _t->getPlayerPosition();
+        case 1: { int _r = _t->getPlayerPosition();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
+        case 2: _t->movePlayer((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -92,7 +92,7 @@ const QMetaObject GameEngine::staticMetaObject = { {
 qt_incomplete_metaTypeArray<qt_meta_stringdata_GameEngine_t
 , QtPrivate::TypeAndForceComplete<GameEngine, std::true_type>
 
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>
 
 >,
     nullptr

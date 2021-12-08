@@ -4,7 +4,7 @@ Rectangle {
     property string previousState: ""
     property int plotIndex: 0
     id: farmPlot
-    color: black
+    color: "black"
     width: 40
     height: 40
 
@@ -18,8 +18,8 @@ Rectangle {
 
     //border.color: "black"
     Text {
-        id: zkouskaFunkcichIndexu
-        text: plotIndex
+        id: zkouskaFunkcichIndexu     
+        text:plotIndex
        anchors.centerIn: parent
     }
     states: [
@@ -46,8 +46,9 @@ Rectangle {
 
         }
     ]
-    Keys.onRightPressed: {
+    Keys.onPressed: {
         gameEngine.movePlayer("right");
-        if(plotIndex===gameEngine.getPlayerPosition) farmPlot.state = "s_FarmField";
+        var position= gameEngine.getPlayerPosition
+        if(plotIndex==position) farmPlot.state = "s_FarmField";
     }
 }
