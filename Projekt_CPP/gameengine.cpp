@@ -25,8 +25,8 @@ void GameEngine::newGame(){
 
 
 };
-bool GameEngine::loadGame(){
-    QFile loadFile("save.json");
+bool GameEngine::loadGame(QString fileName){
+    QFile loadFile(fileName);
     if (!loadFile.open(QIODevice::ReadOnly)){
         qWarning("Couldnt open save file");
         return false;
@@ -84,4 +84,9 @@ if(where=="right"){
 }
 int GameEngine::getPlayerPosition(){
     return m_player->getPosition();
+}
+
+QVariant GameEngine::getFields(){
+
+
 }

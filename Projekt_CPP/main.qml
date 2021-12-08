@@ -31,11 +31,24 @@ Window {
             console.log("ahooojj");
             if (event.key === Qt.Key_Right) {
                 gameEngine.movePlayer("right");
-                var position= gameEngine.getPlayerPosition
-                if(plotIndex==position) farmPlot.state = "s_FarmField";
+                event.accepted = true;
+            }
+            if (event.key === Qt.Key_Left) {
+                gameEngine.movePlayer("left");
+                event.accepted = true;
+            }
+
+            if (event.key === Qt.Key_Up){
+                gameEngine.movePlayer("up");
+                event.accepted = true;
+            }
+            if (event.key === Qt.Key_Down){
+                gameEngine.movePlayer("down");
+                event.accepted = true;
+                    }
             }
         }
     }
 
 
-}
+
