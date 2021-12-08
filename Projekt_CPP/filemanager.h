@@ -4,8 +4,10 @@
 #include <vector>
 #include <player.h>
 #include <inventory.h>
-#include <QFile>
 #include <iostream>
+#include <QXmlStreamReader>
+#include <QFile>
+#include <QDebug>
 
 class FileManager
 {
@@ -13,7 +15,7 @@ private:
     std::string m_file;
 public:
        FileManager();
-       static std::vector<int>loadJson();
+       static std::vector<int>loadXml();
 
 //    bool loadGame();
 //    bool saveGame();
