@@ -46,9 +46,27 @@ Rectangle {
 
         }
     ]
-    Keys.onPressed: {
+    /*Keys.onPressed: {
         gameEngine.movePlayer("right");
         var position= gameEngine.getPlayerPosition
         if(plotIndex==position) farmPlot.state = "s_FarmField";
+    }*/
+    Keys.onPressed: {
+            if (event.key === Qt.Key_Left) {
+                gameEngine.movePlayer("left");
+                event.accepted = true;
+            }
+            if (event.key === Qt.Key_Right){
+                gameEngine.movePlayer("right");
+                event.accepted = true;
+            }
+            if (event.key === Qt.Key_Up){
+                gameEngine.movePlayer("up");
+                event.accepted = true;
+            }
+            if (event.key === Qt.Key_Down){
+                gameEngine.movePlayer("down");
+                event.accepted = true;
+            }
     }
 }
