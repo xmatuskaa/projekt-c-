@@ -5,10 +5,18 @@ Player::Player()
 
 }
 
-    Inventory* Player::createBag(){
-    Inventory* bag = new Inventory();
+Inventory* Player::createBag(std::vector<Seed*>seedVector){
+Inventory* bag = new Inventory();
+bag->setSeed(seedVector);
+m_bag = bag;
+return bag;
+};
+
+void Player::setInventory(Inventory* bag){
     m_bag = bag;
-    return bag;
+};
+Inventory* Player::getInventory(){
+    return m_bag;
 };
 
 void Player::read(const QJsonObject &json){
@@ -29,3 +37,6 @@ int Player::getPosition(){
 void Player::setPosition(int pos){
     m_playerPosition=pos;
 }
+int Player::getMoney(){
+    return m_money;
+};

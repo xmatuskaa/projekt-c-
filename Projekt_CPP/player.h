@@ -20,7 +20,11 @@ public:
     Player();
     Player(QString name,int money);
 
-    Inventory* createBag();
+    Inventory* createBag(std::vector<Seed*>seedVector);
+
+    void setInventory(Inventory* bag);
+    Inventory* getInventory();
+    int getMoney();
 
     void read(const QJsonObject &json);
     void write(QJsonObject &json) const;

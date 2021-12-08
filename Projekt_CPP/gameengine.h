@@ -44,8 +44,11 @@ private:
     Player* m_player;
 
     std::vector<int> m_fields;
-    QList<Seed> seeds;
-    Inventory* inventory;
+
+    std::vector<Seed*> m_seeds;
+    //QList<Seed> m_seeds;
+    Inventory* m_inventory;
+
 
 };
 

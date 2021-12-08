@@ -12,5 +12,6 @@
         <file>save.xml</file>
         <file>PlayerPlot.qml</file>
         <file>Images/player2.png</file>
+        <file>default.json</file>
     </qresource>
 </RCC>

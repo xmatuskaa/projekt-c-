@@ -53,15 +53,28 @@ bool GameEngine::saveGame(){
     return true;
 };
 void GameEngine::read(const QJsonObject &json){
-    m_player->read(json["player"].toObject());
-    m_player->createBag()->read(json["inventory"].toObject());
 
+    if (json.contains("player") && json["player"].isObject())
+        m_player->read(json["player"].toObject());
+
+    if (json.contains("inventory") && json["inventory"].isObject()){
+        m_player->createBag(m_seeds)->read(json["inventory"].toObject());
+
+
+//    m_player->read(json["player"].toObject());
+//    m_player->createBag()->read(json["inventory"].toObject());
+
+        }
 };
 void GameEngine::write(QJsonObject &json) const{
     QJsonObject playerObject;
        m_player->write(playerObject);
        json["player"] = playerObject;
 
+
+       QJsonObject inventoryObject;
+          m_inventory->write(inventoryObject);
+          json["inventory"] = inventoryObject;
 
 };
 

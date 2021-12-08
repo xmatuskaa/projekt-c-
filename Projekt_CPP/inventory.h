@@ -15,6 +15,9 @@ private:
 
 public:
     Inventory();
+    std::vector<Seed*> getInventory();
+    int getCapacity();
+    void setCapacity(int capacity);
 
     void setSeed(std::vector<Seed*> seedVector);
     void read(const QJsonObject &json);
