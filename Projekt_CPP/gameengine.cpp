@@ -125,3 +125,16 @@ int GameEngine::getPositionNumber(){
     return m_position;
 }
 
+void GameEngine::setState(int index, int newValue){
+    std::vector<int>  field = getFields();
+    field.at(index)=newValue;
+}
+
+void GameEngine::itemSlotClicked(int index){
+    if (index == 0){
+        if (getState(index) != "s_Home"){
+            setState(index, 2);
+        }
+    }
+}
+

@@ -13,7 +13,7 @@ class GameEngine : public QObject
         Q_OBJECT
 
     Q_PROPERTY(int getPositionNumber READ getPositionNumber  NOTIFY playerPositionChanged)
-
+    //Q_PROPERTY(QString getState(index) READ getState(index) NOTIFY stateChanged)
 public:
 
    explicit GameEngine(QObject *parent = nullptr);
@@ -24,6 +24,8 @@ public:
     //Q_INVOKABLE QString  getPlayerPosition(int index);
     Q_INVOKABLE  void movePlayer(QString where);
     Q_INVOKABLE QString getState(int index);
+    Q_INVOKABLE void itemSlotClicked(int index);
+
 //    const Player* createPlayer() const;
 
     void newGame();
@@ -33,6 +35,7 @@ public:
     void write(QJsonObject &json) const;
     std::vector<int> getFields();
     int getPositionNumber();
+    void setState(int index, int newValue);
 
 signals:
     void fieldsChanged();

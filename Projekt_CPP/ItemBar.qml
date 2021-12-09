@@ -12,6 +12,9 @@ Rectangle {
             model: 6
             ItemSlot{
                 slotIndex: index
+                state: if(slotIndex==0){
+                           "s_Shovel"
+                       }
                 }
             }
     }

@@ -6,6 +6,7 @@ Rectangle {
     width: 40
     height: 40
     color: "transparent"
+
     Image {
     id: playerImage
     source: "Images/player2.png"
@@ -13,6 +14,7 @@ Rectangle {
     height: parent.height
     anchors.centerIn: parent
     }
+
     Connections{
     target: gameEngine
     function onPlayerPositionChanged(){

@@ -6,6 +6,8 @@ Rectangle {
     width: 20*40
     height: width
     property int position: gameEngine.getPositionNumber
+    //property QString state: gameEngine.getState
+
 
     Grid{
         id: gameGrid
