@@ -115,7 +115,10 @@ return m_fields;
 
 QString GameEngine::getState(int index){
   std::vector<int>  field = getFields();
-    if(field.at(index)==2) return "s_FarmField";
+  if(field.at(index)==1) return "s_Home";
+  if(field.at(index)==2) return "s_FarmField";
+  if(field.at(index)==3) return "s_Pumpkin";
+  if(field.at(index)==4) return "s_Carrot";
     else return "s_Grass";
 }
 int GameEngine::getPositionNumber(){

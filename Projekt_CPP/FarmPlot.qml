@@ -5,45 +5,62 @@ Rectangle {
     property int plotIndex: 0
     id: farmPlot
     color: "black"
+    opacity: 50
     width: 40
     height: 40
+    Image {
+            id: plotImage
+            source: ""
+            width: parent.width
+            height: parent.height
+            anchors.centerIn: parent
+            }
 
-    Image {
-    id: plotImage
-    source: ""
-    width: parent.width
-    height: parent.height
-    anchors.centerIn: parent
-    }
-    Image {
-    id: playerImage
-    source: "fotka toho hrace"
-    width: parent.width
-    height: parent.height
-    anchors.centerIn: parent
-    }
+
+
 
     //border.color: "black"
-    Text {
+    /*Text {
         id: zkouskaFunkcichIndexu     
         text:plotIndex
        anchors.centerIn: parent
-    }
+    }*/
     states: [
     State{
         name: "s_Grass"
         PropertyChanges {
-            target: farmPlot
-            color: "green"
+            target: plotImage
+            source: "Images/grass.png"
              }
         },
     State{
         name: "s_FarmField"
         PropertyChanges {
-            target: farmPlot
-            color: "brown"
+            target: plotImage
+            source: "Images/fieldongrass.png"
              }
-        }
+        },
+        State{
+            name: "s_Home"
+            PropertyChanges {
+                target: plotImage
+                source: "Images/house.png"
+                 }
+            },
+        State{
+            name: "s_Pumpkin"
+            PropertyChanges {
+                target: plotImage
+                source: "Images/pumpkinfield.png"
+                 }
+            },
+        State{
+            name: "s_Carrot"
+            PropertyChanges {
+                target: plotImage
+                source: "Images/carrotfield.png"
+                 }
+            }
         /*State{
         name: "s_Player"
         PropertyChanges {

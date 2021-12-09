@@ -53,5 +53,6 @@ HEADERS += \
     slot.h
 
 DISTFILES += \
+    Images/grass.png \
     Images/player2.png \
     save.xml
