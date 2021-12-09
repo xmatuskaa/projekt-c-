@@ -5,6 +5,7 @@ Rectangle {
     color:"grey"
     width: 20*40
     height: width
+    property int position: gameEngine.getPositionNumber
 
     Grid{
         id: gameGrid
@@ -24,12 +25,9 @@ Rectangle {
         model: 20*20
         PlayerPlot{
             plotIndex: index
-            state:/*if(gameEngine.getPositionNumber===index){
-                     return "s_Player";
-                      }
-                      else {
-                          return "s_Empty";
-                      }*/gameEngine.getPlayerPosition(index);
+            state:if(plotIndex==position){
+                  return "s_Player"}
+            else return "s_Empty"
 
                     }
                  }

@@ -12,7 +12,7 @@ class GameEngine : public QObject
 {
         Q_OBJECT
 
-    Q_PROPERTY(int m_position READ getPositionNumber  NOTIFY playerPositionChanged)
+    Q_PROPERTY(int getPositionNumber READ getPositionNumber  NOTIFY playerPositionChanged)
 
 public:
 
@@ -40,7 +40,7 @@ signals:
 
 public slots:
     QString  getPlayerPosition(int index);
-public:
+private:
     Player* m_player;
 
     std::vector<int> m_fields;

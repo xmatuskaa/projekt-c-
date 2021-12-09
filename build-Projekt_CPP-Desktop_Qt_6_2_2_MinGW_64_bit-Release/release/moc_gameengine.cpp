@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_GameEngine_t {
     const uint offsetsAndSize[22];
-    char stringdata0[114];
+    char stringdata0[121];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_GameEngine_t, stringdata0) + ofs), len 
@@ -39,13 +39,13 @@ QT_MOC_LITERAL(72, 4), // "game"
 QT_MOC_LITERAL(77, 10), // "movePlayer"
 QT_MOC_LITERAL(88, 5), // "where"
 QT_MOC_LITERAL(94, 8), // "getState"
-QT_MOC_LITERAL(103, 10) // "m_position"
+QT_MOC_LITERAL(103, 17) // "getPositionNumber"
 
     },
     "GameEngine\0fieldsChanged\0\0"
     "playerPositionChanged\0getPlayerPosition\0"
     "index\0game\0movePlayer\0where\0getState\0"
-    "m_position"
+    "getPositionNumber"
 };
 #undef QT_MOC_LITERAL
 
