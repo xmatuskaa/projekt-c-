@@ -13,5 +13,11 @@
         <file>PlayerPlot.qml</file>
         <file>Images/player2.png</file>
         <file>default.json</file>
+        <file>Images/carrotfield.png</file>
+        <file>Images/fieldongrass.png</file>
+        <file>Images/grass.png</file>
+        <file>Images/house.png</file>
+        <file>Images/pumpkinfield.png</file>
+        <file>Images/shovel.png</file>
     </qresource>
 </RCC>
