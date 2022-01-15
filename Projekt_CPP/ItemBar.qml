@@ -12,12 +12,21 @@ Rectangle {
             model: 6
             ItemSlot{
                 slotIndex: index
-                state: if(slotIndex==0){
+                state: gameEngine.getBarState(slotIndex);
+
+
+                    /*if(slotIndex==0){
                            "s_Shovel"
                        }
-                       else if (slotIndex==1){
+                       if(slotIndex==1){
                            "s_PumpkinSeeds"
                        }
+                       if(slotIndex==2){
+                           "s_CarrotSeeds"
+                       }
+                       if (slotIndex==5){
+                           "s_Sleep"
+                       }*/
                 }
             }
     }

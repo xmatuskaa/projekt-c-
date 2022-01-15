@@ -121,6 +121,15 @@ QString GameEngine::getState(int index){
   if(field.at(index)==4) return "s_Carrot";
     else return "s_Grass";
 }
+
+QString GameEngine::getBarState(int index){
+   if (index == 0) return "s_Shovel";
+   if (index == 1) return "s_PumpkinSeeds";
+   if (index == 2) return "s_CarrotSeeds";
+   if (index == 5) return "s_Sleep";
+   else return "";
+}
+
 int GameEngine::getPositionNumber(){
     return m_position;
 }

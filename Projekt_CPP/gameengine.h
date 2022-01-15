@@ -24,6 +24,7 @@ public:
     //Q_INVOKABLE QString  getPlayerPosition(int index);
     Q_INVOKABLE  void movePlayer(QString where);
     Q_INVOKABLE QString getState(int index);
+    Q_INVOKABLE QString getBarState(int index);
     Q_INVOKABLE void itemSlotClicked(int index);
 
 //    const Player* createPlayer() const;
@@ -36,6 +37,7 @@ public:
     std::vector<int> getFields();
     int getPositionNumber();
     void setState(int index, int newValue);
+
 
 signals:
     void fieldsChanged();

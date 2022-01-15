@@ -8,6 +8,7 @@ Rectangle {
     radius: 5
     color: "lightgray"
     border.color: "gray"
+    opacity: 50
 
     Image {
             id: itemSlotImage
@@ -29,14 +30,22 @@ Rectangle {
             name: "s_PumpkinSeeds"
             PropertyChanges{
                 target: itemSlotImage
-                source: "Images/pumpkinfield.png"
+                source: "Images/pumpkinseeds.png"
             }
         },
         State{
             name:"s_CarrotSeeds"
+
             PropertyChanges{
                 target: itemSlotImage
-                source: "Images/carrotfield.png"
+                source: "Images/carrotseeds.png"
+            }
+        },
+        State{
+            name: "s_Sleep"
+            PropertyChanges{
+                target: itemSlotImage
+                source: "Image/sleep.png"
             }
         }
 
