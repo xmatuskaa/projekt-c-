@@ -24,6 +24,20 @@ Rectangle {
                 source: "Images/shovel.png"
             }
 
+        },
+        State{
+            name: "s_PumpkinSeeds"
+            PropertyChanges{
+                target: itemSlotImage
+                source: "Images/pumpkinfield.png"
+            }
+        },
+        State{
+            name:"s_CarrotSeeds"
+            PropertyChanges{
+                target: itemSlotImage
+                source: "Images/carrotfield.png"
+            }
         }
 
     ]

@@ -15,7 +15,11 @@ Rectangle {
                 state: if(slotIndex==0){
                            "s_Shovel"
                        }
+                       else if (slotIndex==1){
+                           "s_PumpkinSeeds"
+                       }
                 }
             }
     }
+
 }
