@@ -62,14 +62,28 @@ Rectangle {
                  }
             },
         State{
-            name: "s_StageOne"
+            name: "s_PumpkinStageOne"
             PropertyChanges {
                 target: plotImage
                 source: "Images/fieldgrowone.png"
                  }
             },
         State{
-            name: "s_StageTwo"
+            name: "s_PumpkinStageTwo"
+            PropertyChanges {
+                target: plotImage
+                source: "Images/fieldgrowtwo.png"
+                 }
+            },
+        State{
+            name: "s_CarrotStageOne"
+            PropertyChanges {
+                target: plotImage
+                source: "Images/fieldgrowone.png"
+                 }
+            },
+        State{
+            name: "s_CarrotStageTwo"
             PropertyChanges {
                 target: plotImage
                 source: "Images/fieldgrowtwo.png"

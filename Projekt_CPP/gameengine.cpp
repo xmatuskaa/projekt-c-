@@ -122,10 +122,12 @@ QString GameEngine::getState(int index){
   if(m_fields.at(index)==2) return "s_FarmField";
   if(m_fields.at(index)==3) return "s_Pumpkin";
   if(m_fields.at(index)==4) return "s_Carrot";
-  if(m_fields.at(index)==5) return "s_StageOne";
-  if(m_fields.at(index)==6) return "s_StageTwo";
-  if(m_fields.at(index)==7) return "s_Market";
-    else return "s_Grass";
+  if(m_fields.at(index)==5) return "s_PumpkinStageOne";
+  if(m_fields.at(index)==6) return "s_PumpkinStageTwo";
+  if(m_fields.at(index)==9) return "s_Market";
+  if(m_fields.at(index)==7) return "s_CarrotStageOne";
+  if(m_fields.at(index)==8) return "s_CarrotStageTwo";
+  else return "s_Grass";
 }
 
 QString GameEngine::getBarState(int index){
@@ -243,19 +245,36 @@ void GameEngine::plantCarrots(){
             //notify inventory
             //notify screen
             //change from farmfield to stage one
-            setState(m_position, 6);
+            setState(m_position, 7);
             emit carrotSeedsChanged();
         }
     }
 }
 void GameEngine::sleep(){
     if(m_fields.at(m_position)==1){
-    m_day++;
-    emit dayChanged();
-    }
-    //save game to files
     //change day to +1
-    //grow seeds
+        m_day++;
+    emit dayChanged();
+        //save game to files
+
+        //grow seeds
+        for (int i=0; i<400; i++){
+                if (m_fields.at(i) == 8){
+                    setState(i, 4);
+                }
+                else if (m_fields.at(i) == 7){
+                    setState(i, 8);
+                }
+                else if (m_fields.at(i) == 6){
+                    setState(i, 3);
+                }
+                else if (m_fields.at(i) == 5){
+                    setState(i, 6);
+                }
+            }
+    }
+
+
 }
 int GameEngine::getDay(){
     return m_day;
