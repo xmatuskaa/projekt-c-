@@ -90,10 +90,17 @@ Rectangle {
                  }
             },
         State{
-            name: "s_Market"
+            name: "s_MarketSell"
             PropertyChanges {
                 target: plotImage
                 source: "Images/market.png"
+                 }
+            },
+        State{
+            name: "s_MarketBuy"
+            PropertyChanges {
+                target: plotImage
+                source: "Images/stall.png"
                  }
             }
         /*State{

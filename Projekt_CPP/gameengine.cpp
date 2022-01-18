@@ -124,9 +124,10 @@ QString GameEngine::getState(int index){
   if(m_fields.at(index)==4) return "s_Carrot";
   if(m_fields.at(index)==5) return "s_PumpkinStageOne";
   if(m_fields.at(index)==6) return "s_PumpkinStageTwo";
-  if(m_fields.at(index)==9) return "s_Market";
+  if(m_fields.at(index)==9) return "s_MarketSell";
   if(m_fields.at(index)==7) return "s_CarrotStageOne";
   if(m_fields.at(index)==8) return "s_CarrotStageTwo";
+  if(m_fields.at(index)==10) return "s_MarketBuy";
   else return "s_Grass";
 }
 

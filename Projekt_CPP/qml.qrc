@@ -28,5 +28,6 @@
         <file>Images/carrot.png</file>
         <file>Images/pumpkin.png</file>
         <file>forSaving.xml</file>
+        <file>Images/stall.png</file>
     </qresource>
 </RCC>
