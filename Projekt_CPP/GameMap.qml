@@ -7,7 +7,7 @@ Rectangle {
     width: 20*37
     height: width
     property int position: gameEngine.getPositionNumber
-
+    property int zmeneno: gameEngine.getFieldsAt
 
 
 
@@ -19,7 +19,7 @@ Rectangle {
         //property int type: gameEngine.getFieldsAt(plotIndex)
         FarmPlot{
             plotIndex: index
-            state: gameEngine.getState(index);
+            state: if(zmeneno>0)gameEngine.getState(plotIndex);
                      }
         }
     }

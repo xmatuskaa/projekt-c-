@@ -15,7 +15,7 @@ Rectangle {
     anchors.centerIn: parent
     }
 
-    Connections{
+    /*Connections{
     target: gameEngine
     function onPlayerPositionChanged(){
      state:if(gameEngine.getPositionNumber===index){
@@ -26,7 +26,7 @@ Rectangle {
              }//gameEngine.getPlayerPosition(index);
 
             }
-    }
+    }*/
     states:[
         State{
             name: "s_Empty"

@@ -14,7 +14,9 @@ class GameEngine : public QObject
 
     Q_PROPERTY(int getPositionNumber READ getPositionNumber  NOTIFY playerPositionChanged)
 
-    //Q_PROPERTY(int getFieldsAt READ getFieldsAt NOTIFY fieldChanged)
+    Q_PROPERTY(int getFieldsAt READ getFieldsAt NOTIFY fieldChanged)
+    Q_PROPERTY(int getMoney READ getMoney NOTIFY moneyChanged)
+    Q_PROPERTY(int getDay READ getDay NOTIFY dayChanged)
 public:
 
    explicit GameEngine(QObject *parent = nullptr);
@@ -39,13 +41,17 @@ public:
     std::vector<int> getFields();
     int getPositionNumber();
     void setState(int index, int newValue);
-    //int getFieldsAt(int index);
+     int getFieldsAt();
+     int getMoney();
+     int getDay();
 
 
 signals:
     void fieldsChanged();
     void playerPositionChanged();
     void fieldChanged();
+   void dayChanged();
+   void moneyChanged();
 
 public slots:
     QString  getPlayerPosition(int index);
@@ -58,8 +64,8 @@ private:
     std::vector<Seed*> m_seeds;
     //QList<Seed> m_seeds;
     Inventory* m_inventory;
-    int m_pumpkinSeeds=0;
-    int m_carrotSeeds=0;
+    int m_pumpkinSeeds=5;
+    int m_carrotSeeds=5;
     int m_pumpkins=0;
     int m_carrots=0;
     void shovelClicked();
@@ -67,7 +73,9 @@ private:
     void plantCarrots();
     void sleep();
 int m_position = 30;
-
+int m_lastField=10;
+int m_day =1;
+int m_money = 0;
 };
 
 #endif // GAMEENGINE_H

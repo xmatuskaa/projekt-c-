@@ -6,7 +6,7 @@ height: 60
 radius: 5
 color: "darkorange"
 Text {
-    property int day: 0
+    property int day: gameEngine.getDay
     id: dayCounter
     text:"Day: " + String(day)
     anchors.bottom: parent.bottom

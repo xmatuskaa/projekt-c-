@@ -108,10 +108,9 @@ QString GameEngine::getPlayerPosition(int index){
     }
 }
 
-/*int GameEngine::getFieldsAt(int index){
-    getFields();
-    return m_fields.at(index);
-}*/
+int GameEngine::getFieldsAt(){
+   return m_lastField;
+}
 std::vector<int> GameEngine::getFields(){
 m_fields = FileManager::loadXml();
 return m_fields;
@@ -119,14 +118,13 @@ return m_fields;
 
 QString GameEngine::getState(int index){
 
-    std::vector<int>  field = getFields();
-  if(field.at(index)==1) return "s_Home";
-  if(field.at(index)==2) return "s_FarmField";
-  if(field.at(index)==3) return "s_Pumpkin";
-  if(field.at(index)==4) return "s_Carrot";
-  if(field.at(index)==5) return "s_StageOne";
-  if(field.at(index)==6) return "s_StageTwo";
-  if(field.at(index)==7) return "s_Market";
+  if(m_fields.at(index)==1) return "s_Home";
+  if(m_fields.at(index)==2) return "s_FarmField";
+  if(m_fields.at(index)==3) return "s_Pumpkin";
+  if(m_fields.at(index)==4) return "s_Carrot";
+  if(m_fields.at(index)==5) return "s_StageOne";
+  if(m_fields.at(index)==6) return "s_StageTwo";
+  if(m_fields.at(index)==7) return "s_Market";
     else return "s_Grass";
 }
 
@@ -146,9 +144,9 @@ int GameEngine::getPositionNumber(){
 
 
 void GameEngine::setState(int index, int newValue){
-    std::vector<int>  field = getFields();
-    field.at(index)=newValue;
+    m_fields.at(index)=newValue;
     emit fieldChanged();
+    emit playerPositionChanged();
 }
 
 void GameEngine::itemSlotClicked(int index){
@@ -180,26 +178,29 @@ void GameEngine::itemBarClicked(int index){
     }
     else {
         std::cerr << "Error: did not log a slot index";
+
     }
+    m_lastField++;
+    emit fieldChanged();
 }
 
 void GameEngine::shovelClicked(){
-    std::vector<int>  field = getFields();
-    if (field.at(m_position)==1){
+    //std::vector<int>  field = getFields();
+    if (m_fields.at(m_position)==1){
         //do nothing
     }
-    else if (field.at(m_position)==2){
+    else if (m_fields.at(m_position)==2){
         //turn farmfield to grass
         setState(m_position, 0);
     }
-    else if (field.at(m_position)==3){
+    else if (m_fields.at(m_position)==3){
         //harvest pumkin
         //-> add pumkin to inventory
         m_pumpkins++;
         //-> change pumkinfield to farmfield
         setState(m_position, 2);
     }
-    else if (field.at(m_position)==4){
+    else if (m_fields.at(m_position)==4){
         //harvest carrot
         //-> add carrot to inventory
         m_carrots++;
@@ -213,9 +214,9 @@ void GameEngine::shovelClicked(){
 }
 
 void GameEngine::plantPumpkins(){
-    std::vector<int>  field = getFields();
+
     //is the field im standing on a farmfield?
-    if (field.at(m_position)==2){
+    if (m_fields.at(m_position)==2){
         //do i have pumpkin seeds available?
         if (m_pumpkinSeeds > 0){
             //remove 1 pumpkin seed from inventory
@@ -223,16 +224,15 @@ void GameEngine::plantPumpkins(){
             //notify inventory
             //notify screen
             //change from farmfield to stage one
-            setState(m_position, 2);
+            setState(m_position, 5);
         }
     }
 
 }
 
 void GameEngine::plantCarrots(){
-    std::vector<int>  field = getFields();
     //is the field im standing on a farmfield?
-    if (field.at(m_position)==2){
+    if (m_fields.at(m_position)==2){
         //do i have carrot seeds available?
         if (m_carrotSeeds > 0){
             //remove 1 carrot seed from inventory
@@ -240,13 +240,23 @@ void GameEngine::plantCarrots(){
             //notify inventory
             //notify screen
             //change from farmfield to stage one
-            setState(m_position, 2);
+            setState(m_position, 6);
         }
     }
 }
 void GameEngine::sleep(){
+    if(m_fields.at(m_position)==1){
+    m_day++;
+    emit dayChanged();
+    }
     //save game to files
     //change day to +1
     //grow seeds
 }
+int GameEngine::getDay(){
+    return m_day;
+}
+int GameEngine::getMoney(){
 
+    return m_money;
+}
