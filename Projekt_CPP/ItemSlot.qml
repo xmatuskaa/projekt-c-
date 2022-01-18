@@ -72,7 +72,7 @@ Rectangle {
         anchors.fill:parent
         hoverEnabled: true
         onClicked:{
-
+            gameEngine.itemBarClicked(slotIndex);
         }
     }
 }

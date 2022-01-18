@@ -14,6 +14,7 @@ class GameEngine : public QObject
 
     Q_PROPERTY(int getPositionNumber READ getPositionNumber  NOTIFY playerPositionChanged)
     //Q_PROPERTY(QString getState(index) READ getState(index) NOTIFY stateChanged)
+
 public:
 
    explicit GameEngine(QObject *parent = nullptr);
@@ -26,6 +27,7 @@ public:
     Q_INVOKABLE QString getState(int index);
     Q_INVOKABLE QString getBarState(int index);
     Q_INVOKABLE void itemSlotClicked(int index);
+    Q_INVOKABLE void itemBarClicked(int index);
 
 //    const Player* createPlayer() const;
 
@@ -53,6 +55,12 @@ private:
     std::vector<Seed*> m_seeds;
     //QList<Seed> m_seeds;
     Inventory* m_inventory;
+    int m_pumpkinSeeds=0;
+    int m_carrotSeeds=0;
+    void shovelClicked();
+    void plantPumpkins();
+    void plantCarrots();
+    void sleep();
 int m_position = 30;
 
 };

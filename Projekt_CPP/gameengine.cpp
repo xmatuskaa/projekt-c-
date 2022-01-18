@@ -148,4 +148,95 @@ void GameEngine::itemSlotClicked(int index){
         }
     }
 }
+void GameEngine::itemBarClicked(int index){
+    if(index==0){
+       shovelClicked();
+    }
+    else if(index==1){
+        plantPumpkins();
+    }
+    else if(index==2){
+        plantCarrots();
+    }
+    else if(index==3){
+    // pls insert selling pumpkins in the market
+    }
+    else if(index==4){
+    //pls insert selling carrots at the market
+    }
+    else if(index==5){
+        //go to sleep
+        sleep();
+    }
+    else {
+        std::cerr << "Error: did not log a slot index";
+    }
+}
+
+void GameEngine::shovelClicked(){
+    std::vector<int>  field = getFields();
+    if (field.at(m_position)==1){
+        //do nothing
+    }
+    else if (field.at(m_position)==2){
+        //turn farmfield to grass
+        setState(m_position, 0);
+    }
+    else if (field.at(m_position)==3){
+        //harvest pumkin
+        //-> add pumkin to inventory
+
+        //-> change pumkinfield to farmfield
+        setState(m_position, 2);
+    }
+    else if (field.at(m_position)==4){
+        //harvest carrot
+        //-> add carrot to inventory
+
+        //-> change carrotfield to farmfield
+        setState(m_position, 2);
+    }
+    else {
+        //change grass to farmfield
+        setState(m_position, 2);
+    }
+}
+
+void GameEngine::plantPumpkins(){
+    std::vector<int>  field = getFields();
+    //is the field im standing on a farmfield?
+    if (field.at(m_position)==2){
+        //do i have pumpkin seeds available?
+        if (m_pumpkinSeeds > 0){
+            //remove 1 pumpkin seed from inventory
+            m_pumpkinSeeds--;
+            //notify inventory
+            //notify screen
+            //change from farmfield to stage one
+            setState(m_position, 2);
+        }
+    }
+
+}
+
+void GameEngine::plantCarrots(){
+    std::vector<int>  field = getFields();
+    //is the field im standing on a farmfield?
+    if (field.at(m_position)==2){
+        //do i have carrot seeds available?
+        if (m_carrotSeeds > 0){
+            //remove 1 carrot seed from inventory
+            m_carrotSeeds--;
+            //notify inventory
+            //notify screen
+            //change from farmfield to stage one
+            setState(m_position, 2);
+        }
+    }
+}
+void GameEngine::sleep(){
+    //save game to files
+    //change day to +1
+    //grow seeds
+}
 
