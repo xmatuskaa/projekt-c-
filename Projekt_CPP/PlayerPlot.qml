@@ -3,8 +3,8 @@ import QtQuick 2.0
 Rectangle {
     property int plotIndex: 0
     id: playerPlot
-    width: 40
-    height: 40
+    width: 37
+    height: 37
     color: "transparent"
 
     Image {

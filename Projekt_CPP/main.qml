@@ -2,8 +2,8 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 
 Window {
-    width: 1920
-    height: 1080
+    width: 1500
+    height: 900
     visible: true
     title: qsTr("Farm")
 

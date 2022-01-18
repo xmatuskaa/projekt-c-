@@ -6,8 +6,8 @@ Rectangle {
     id: farmPlot
     color: "black"
     opacity: 50
-    width: 40
-    height: 40
+    width: 37
+    height: 37
     Image {
             id: plotImage
             source: ""

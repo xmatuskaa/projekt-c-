@@ -79,19 +79,19 @@ void GameEngine::write(QJsonObject &json) const{
 };
 
 void GameEngine::movePlayer(QString where){
-if(where=="up"){
+if(where=="up" and m_position>19){
    m_position-=20;
    emit playerPositionChanged();
 }
-if(where=="down"){
+if(where=="down" and m_position<380){
     m_position+=20;
     emit playerPositionChanged();
 }
-if(where=="left"){
+if(where=="left" and m_position>0){
     m_position-=1;
     emit playerPositionChanged();
 }
-if(where=="right"){
+if(where=="right" and m_position<399){
    m_position+=1;
    emit playerPositionChanged();
     //zmenit hodnotu v xmlku na 1

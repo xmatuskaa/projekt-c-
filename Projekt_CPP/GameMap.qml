@@ -4,7 +4,7 @@ import QtQuick.Controls 2.15
 Rectangle {
     id: gameMap
     color:"grey"
-    width: 20*40
+    width: 20*37
     height: width
     property int position: gameEngine.getPositionNumber
 
