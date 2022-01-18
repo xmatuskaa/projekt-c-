@@ -108,17 +108,25 @@ QString GameEngine::getPlayerPosition(int index){
     }
 }
 
+/*int GameEngine::getFieldsAt(int index){
+    getFields();
+    return m_fields.at(index);
+}*/
 std::vector<int> GameEngine::getFields(){
 m_fields = FileManager::loadXml();
 return m_fields;
 }
 
 QString GameEngine::getState(int index){
-  std::vector<int>  field = getFields();
+
+    std::vector<int>  field = getFields();
   if(field.at(index)==1) return "s_Home";
   if(field.at(index)==2) return "s_FarmField";
   if(field.at(index)==3) return "s_Pumpkin";
   if(field.at(index)==4) return "s_Carrot";
+  if(field.at(index)==5) return "s_StageOne";
+  if(field.at(index)==6) return "s_StageTwo";
+  if(field.at(index)==7) return "s_Market";
     else return "s_Grass";
 }
 
@@ -136,9 +144,11 @@ int GameEngine::getPositionNumber(){
     return m_position;
 }
 
+
 void GameEngine::setState(int index, int newValue){
     std::vector<int>  field = getFields();
     field.at(index)=newValue;
+    emit fieldChanged();
 }
 
 void GameEngine::itemSlotClicked(int index){
@@ -185,14 +195,14 @@ void GameEngine::shovelClicked(){
     else if (field.at(m_position)==3){
         //harvest pumkin
         //-> add pumkin to inventory
-
+        m_pumpkins++;
         //-> change pumkinfield to farmfield
         setState(m_position, 2);
     }
     else if (field.at(m_position)==4){
         //harvest carrot
         //-> add carrot to inventory
-
+        m_carrots++;
         //-> change carrotfield to farmfield
         setState(m_position, 2);
     }

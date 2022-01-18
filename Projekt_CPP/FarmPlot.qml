@@ -60,6 +60,27 @@ Rectangle {
                 target: plotImage
                 source: "Images/carrotfield.png"
                  }
+            },
+        State{
+            name: "s_StageOne"
+            PropertyChanges {
+                target: plotImage
+                source: "Images/fieldgrowone.png"
+                 }
+            },
+        State{
+            name: "s_StageTwo"
+            PropertyChanges {
+                target: plotImage
+                source: "Images/fieldgrowtwo.png"
+                 }
+            },
+        State{
+            name: "s_Market"
+            PropertyChanges {
+                target: plotImage
+                source: "Images/market.png"
+                 }
             }
         /*State{
         name: "s_Player"

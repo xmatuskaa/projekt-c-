@@ -7,7 +7,8 @@ Rectangle {
     width: 20*40
     height: width
     property int position: gameEngine.getPositionNumber
-    //property QString state: gameEngine.getState
+
+
 
 
     Grid{
@@ -15,6 +16,7 @@ Rectangle {
         rows: 20
         Repeater{
         model: 20*20
+        //property int type: gameEngine.getFieldsAt(plotIndex)
         FarmPlot{
             plotIndex: index
             state: gameEngine.getState(index);

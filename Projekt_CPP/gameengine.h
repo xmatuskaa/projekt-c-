@@ -13,8 +13,8 @@ class GameEngine : public QObject
         Q_OBJECT
 
     Q_PROPERTY(int getPositionNumber READ getPositionNumber  NOTIFY playerPositionChanged)
-    //Q_PROPERTY(QString getState(index) READ getState(index) NOTIFY stateChanged)
 
+    //Q_PROPERTY(int getFieldsAt READ getFieldsAt NOTIFY fieldChanged)
 public:
 
    explicit GameEngine(QObject *parent = nullptr);
@@ -39,14 +39,17 @@ public:
     std::vector<int> getFields();
     int getPositionNumber();
     void setState(int index, int newValue);
+    //int getFieldsAt(int index);
 
 
 signals:
     void fieldsChanged();
     void playerPositionChanged();
+    void fieldChanged();
 
 public slots:
     QString  getPlayerPosition(int index);
+
 private:
     Player* m_player;
 
@@ -57,6 +60,8 @@ private:
     Inventory* m_inventory;
     int m_pumpkinSeeds=0;
     int m_carrotSeeds=0;
+    int m_pumpkins=0;
+    int m_carrots=0;
     void shovelClicked();
     void plantPumpkins();
     void plantCarrots();
