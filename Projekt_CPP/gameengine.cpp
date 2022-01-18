@@ -199,6 +199,7 @@ void GameEngine::shovelClicked(){
         m_pumpkins++;
         //-> change pumkinfield to farmfield
         setState(m_position, 2);
+        emit pumpkinChanged();
     }
     else if (m_fields.at(m_position)==4){
         //harvest carrot
@@ -206,6 +207,7 @@ void GameEngine::shovelClicked(){
         m_carrots++;
         //-> change carrotfield to farmfield
         setState(m_position, 2);
+        emit carrotChanged();
     }
     else {
         //change grass to farmfield
@@ -225,6 +227,7 @@ void GameEngine::plantPumpkins(){
             //notify screen
             //change from farmfield to stage one
             setState(m_position, 5);
+            emit pumpkinSeedsChanged();
         }
     }
 
@@ -241,6 +244,7 @@ void GameEngine::plantCarrots(){
             //notify screen
             //change from farmfield to stage one
             setState(m_position, 6);
+            emit carrotSeedsChanged();
         }
     }
 }
@@ -260,3 +264,16 @@ int GameEngine::getMoney(){
 
     return m_money;
 }
+int GameEngine::getPumpkinSeeds(){
+    return m_pumpkinSeeds;
+}
+int GameEngine::getPumpkin(){
+    return m_pumpkins;
+}
+int GameEngine::getCarrotSeeds(){
+    return m_carrotSeeds;
+}
+int GameEngine::getCarrot(){
+    return m_carrots;
+}
+

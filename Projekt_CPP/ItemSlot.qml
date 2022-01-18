@@ -18,12 +18,27 @@ Rectangle {
             anchors.centerIn: parent
 
             }
+    Text {
+        id: amount
+        text:""
+        anchors.centerIn: parent
+        anchors.bottom: parent.bottom
+        font {
+            pixelSize: 20
+            bold: true
+             }
+    }
     states:[
         State{
             name: "s_Shovel"
             PropertyChanges {
                 target: itemSlotImage
                 source: "Images/shovel.png"
+            }
+            PropertyChanges {
+                target: amount
+               text:""
+
             }
 
 
@@ -34,6 +49,11 @@ Rectangle {
                 target: itemSlotImage
                 source: "Images/pumpkinseeds.png"
             }
+            PropertyChanges {
+                target: amount
+               text:gameEngine.getPumpkinSeeds
+
+            }
         },
         State{
             name:"s_CarrotSeeds"
@@ -42,12 +62,22 @@ Rectangle {
                 target: itemSlotImage
                 source: "Images/carrotseeds.png"
             }
+            PropertyChanges {
+                target: amount
+               text:gameEngine.getCarrotSeeds
+
+            }
         },
         State{
          name: "s_Pumpkin"
          PropertyChanges {
              target: itemSlotImage
              source: "Images/pumpkin.png"
+         }
+         PropertyChanges {
+             target: amount
+            text:gameEngine.getPumpkin
+
          }
 
         },
@@ -57,6 +87,11 @@ Rectangle {
         PropertyChanges {
             target: itemSlotImage
             source: "Images/carrot.png"
+        }
+        PropertyChanges {
+            target: amount
+           text:gameEngine.getCarrot
+
         }
         },
         State{

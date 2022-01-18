@@ -17,6 +17,10 @@ class GameEngine : public QObject
     Q_PROPERTY(int getFieldsAt READ getFieldsAt NOTIFY fieldChanged)
     Q_PROPERTY(int getMoney READ getMoney NOTIFY moneyChanged)
     Q_PROPERTY(int getDay READ getDay NOTIFY dayChanged)
+    Q_PROPERTY(int getPumpkinSeeds READ getPumpkinSeeds NOTIFY pumpkinSeedsChanged)
+    Q_PROPERTY(int getPumpkin READ getPumpkin NOTIFY pumpkinChanged)
+    Q_PROPERTY(int getCarrotSeeds READ getCarrotSeeds NOTIFY carrotSeedsChanged)
+    Q_PROPERTY(int getCarrot READ getCarrot NOTIFY carrotChanged)
 public:
 
    explicit GameEngine(QObject *parent = nullptr);
@@ -44,14 +48,22 @@ public:
      int getFieldsAt();
      int getMoney();
      int getDay();
+     int getPumpkinSeeds();
+     int getPumpkin();
+     int getCarrotSeeds();
+     int getCarrot();
 
 
 signals:
     void fieldsChanged();
     void playerPositionChanged();
     void fieldChanged();
-   void dayChanged();
-   void moneyChanged();
+    void dayChanged();
+    void moneyChanged();
+    void pumpkinSeedsChanged();
+    void pumpkinChanged();
+    void carrotSeedsChanged();
+    void carrotChanged();
 
 public slots:
     QString  getPlayerPosition(int index);
