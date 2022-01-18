@@ -27,5 +27,6 @@
         <file>Images/sleep.png</file>
         <file>Images/carrot.png</file>
         <file>Images/pumpkin.png</file>
+        <file>forSaving.xml</file>
     </qresource>
 </RCC>

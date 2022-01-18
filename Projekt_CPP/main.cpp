@@ -2,6 +2,8 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include "gameengine.h"
+#include "filemanager.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -22,6 +24,9 @@ int main(int argc, char *argv[])
  QQmlContext* context = engine.rootContext();
 context->setContextProperty("gameEngine", &gameEngine);
     engine.load(url);
+
+//   FileManager* fm = new FileManager();
+//   fm->writeToXml(1,2);
 
     return app.exec();
 }

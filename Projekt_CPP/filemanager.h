@@ -18,6 +18,11 @@ public:
        static std::vector<int>loadXml();
        static void writeToXml(int index, int number);
 
+
+       static void writeToIndex(int index, int number, QString filename);
+
+
+
 //    bool loadGame();
 //    bool saveGame();
 
