@@ -16,6 +16,7 @@ Rectangle {
             width: parent.width
             height: parent.height
             anchors.centerIn: parent
+
             }
     states:[
         State{
@@ -24,6 +25,7 @@ Rectangle {
                 target: itemSlotImage
                 source: "Images/shovel.png"
             }
+
 
         },
         State{
@@ -42,10 +44,26 @@ Rectangle {
             }
         },
         State{
+         name: "s_Pumpkin"
+         PropertyChanges {
+             target: itemSlotImage
+             source: "Images/pumpkin.png"
+         }
+
+        },
+        State{
+
+        name:"s_Carrot"
+        PropertyChanges {
+            target: itemSlotImage
+            source: "Images/carrot.png"
+        }
+        },
+        State{
             name: "s_Sleep"
             PropertyChanges{
                 target: itemSlotImage
-                source: "Image/sleep.png"
+                source: "Images/sleep.png"
             }
         }
 

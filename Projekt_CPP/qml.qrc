@@ -19,5 +19,13 @@
         <file>Images/house.png</file>
         <file>Images/pumpkinfield.png</file>
         <file>Images/shovel.png</file>
+        <file>Images/carrotseeds.png</file>
+        <file>Images/fieldgrowone.png</file>
+        <file>Images/fieldgrowtwo.png</file>
+        <file>Images/market.png</file>
+        <file>Images/pumpkinseeds.png</file>
+        <file>Images/sleep.png</file>
+        <file>Images/carrot.png</file>
+        <file>Images/pumpkin.png</file>
     </qresource>
 </RCC>

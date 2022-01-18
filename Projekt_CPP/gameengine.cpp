@@ -126,8 +126,10 @@ QString GameEngine::getBarState(int index){
    if (index == 0) return "s_Shovel";
    if (index == 1) return "s_PumpkinSeeds";
    if (index == 2) return "s_CarrotSeeds";
+   if (index == 3) return "s_Pumpkin";
+   if (index == 4) return "s_Carrot";
    if (index == 5) return "s_Sleep";
-   else return "";
+   else return "s_Sleep";
 }
 
 int GameEngine::getPositionNumber(){

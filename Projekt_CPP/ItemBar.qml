@@ -2,8 +2,8 @@ import QtQuick 2.0
 
 Rectangle {
     id: itemBar
-    width: 380
-    height: 80
+    width: 360
+    height: 60
     Grid{
         anchors.centerIn: parent
         id: itemGrid
@@ -15,7 +15,7 @@ Rectangle {
                 state: gameEngine.getBarState(slotIndex);
 
 
-                    /*if(slotIndex==0){
+                      /*if(slotIndex==0){
                            "s_Shovel"
                        }
                        if(slotIndex==1){
@@ -29,6 +29,10 @@ Rectangle {
                        }*/
                 }
             }
+    }/*
+    Shovel{
+
     }
+*/
 
 }
