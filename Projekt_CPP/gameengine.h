@@ -84,6 +84,8 @@ private:
     void plantPumpkins();
     void plantCarrots();
     void sleep();
+    void sellCarrot();
+    void sellPumpkin();
 int m_position = 30;
 int m_lastField=10;
 int m_day =1;

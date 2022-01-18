@@ -169,10 +169,10 @@ void GameEngine::itemBarClicked(int index){
         plantCarrots();
     }
     else if(index==3){
-    // pls insert selling pumpkins in the market
+    sellPumpkin();
     }
     else if(index==4){
-    //pls insert selling carrots at the market
+    sellCarrot();
     }
     else if(index==5){
         //go to sleep
@@ -272,10 +272,32 @@ void GameEngine::sleep(){
                     setState(i, 6);
                 }
             }
+        for(int i = 0; i<400;i++){
+ FileManager::writeToIndex(i, m_fields.at(i),"Users\Honza\Desktop\PROJEKT CPP LOLEC\Projekt_CPP\forSaving.xml");
+        }
     }
-
-
 }
+void GameEngine::sellCarrot(){
+    if (m_fields.at(m_position)==9){
+        if(m_carrots>0){
+            m_carrots--;
+            m_money +=20;
+           emit carrotChanged();
+            emit moneyChanged();
+        }
+    }
+}
+void GameEngine::sellPumpkin(){
+    if (m_fields.at(m_position)==9){
+        if(m_pumpkins>0){
+            m_pumpkins--;
+            m_money +=30;
+            emit pumpkinChanged();
+            emit moneyChanged();
+        }
+    }
+}
+
 int GameEngine::getDay(){
     return m_day;
 }

@@ -4,7 +4,8 @@ Rectangle {
 width: 180
 height: 60
 radius: 5
-color: "darkorange"
+color: "lightgray"
+border.color: "gray"
 Text {
     property int day: gameEngine.getDay
     id: dayCounter
@@ -16,7 +17,7 @@ Text {
          }
     }
 Text {
-    property int money: 0
+    property int money: gameEngine.getMoney
     id: moneyCounter
     text:"Money: " + String(money)
     anchors.right: parent.right

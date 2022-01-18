@@ -57,7 +57,7 @@ void FileManager::writeToIndex(int index, int number, QString filename){
     } else {
          qCritical() << "Soubor se nepovedlo otevritttt\n";
     }
-
+file.close();
 };
 
 std::vector<int> FileManager::loadXml(){
