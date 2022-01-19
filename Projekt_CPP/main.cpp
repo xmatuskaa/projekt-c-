@@ -26,7 +26,11 @@ context->setContextProperty("gameEngine", &gameEngine);
     engine.load(url);
 
 //   FileManager* fm = new FileManager();
-//   fm->writeToXml(1,2);
+//   std::cout << fm->getValueFronXML(17);
+////   for (int i = 0; i < 10; i++){
+////       fm->writeToIndex(i,2, "/Users/evgeniavolkova/3 semestr/git_cpc/projekt-c-/Projekt_CPP/forSaving.xml");
+////   }
+
 
     return app.exec();
 }
