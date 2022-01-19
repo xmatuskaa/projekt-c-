@@ -13,13 +13,13 @@ class FileManager
 {
 private:
     std::string m_file;
+    QString m_fileForSave;
 public:
        FileManager();
        static std::vector<int>loadXml();
-       static void writeToXml(int index, int number);
+       void writeToXml(int index, int number);
+       QString getSaveFile();
 
-
-       static void writeToIndex(int index, int number, QString filename);
 
 
 

@@ -292,9 +292,10 @@ void GameEngine::sleep(){
                     setState(i, 6);
                 }
             }
-        for(int i = 0; i<400;i++){
- FileManager::writeToIndex(i, m_fields.at(i),"forSaving.xml");
-        }
+//        for(int i = 0; i<400;i++){
+// FileManager::writeToIndex(i, m_fields.at(i),"forSaving.xml");
+//        }
+        saveXML();
     }
 }
 void GameEngine::sellCarrot(){
@@ -337,4 +338,35 @@ int GameEngine::getCarrotSeeds(){
 int GameEngine::getCarrot(){
     return m_carrots;
 }
+
+void GameEngine::saveXML(){
+    QFile file("/Users/evgeniavolkova/3 semestr/git_cpc/projekt-c-/Projekt_CPP/save.xml"); // переписать !!!! prepsat nazev
+    if (file.open(QIODevice::WriteOnly)){
+        QXmlStreamWriter writer;
+        writer.setDevice(&file);
+         writer.setAutoFormatting(true);
+        writer.writeStartDocument();
+        writer.writeStartElement("slot");
+
+        for (int i = 0; i < 400; i++ ){
+            writer.writeStartElement("field");
+            writer.writeAttribute("index",QString::number(i));
+            writer.writeCharacters(QString::number(m_fields.at(i)));
+            writer.writeEndElement();
+        }
+        writer.writeEndElement();
+        writer.writeEndDocument();
+    } else {
+        qCritical() << "Soubor se nepovedlo otevritttt\n";
+    }
+    file.close();
+
+};
+
+
+
+
+
+
+
 
