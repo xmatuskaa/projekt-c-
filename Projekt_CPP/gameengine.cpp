@@ -118,7 +118,11 @@ return m_fields;
 
 QString GameEngine::getState(int index){
 
-  if(m_fields.at(index)==1) return "s_Home";
+  //if(m_fields.at(index)==1) return "s_Home";
+  if(m_fields.at(index)==11) return "s_Mansion1";
+  if(m_fields.at(index)==12) return "s_Mansion2";
+  if(m_fields.at(index)==13) return "s_Mansion3";
+  if(m_fields.at(index)==14) return "s_Mansion4";
   if(m_fields.at(index)==2) return "s_FarmField";
   if(m_fields.at(index)==3) return "s_Pumpkin";
   if(m_fields.at(index)==4) return "s_Carrot";
@@ -154,7 +158,7 @@ void GameEngine::setState(int index, int newValue){
 
 void GameEngine::itemSlotClicked(int index){
     if (index == 0){
-        if (getState(index) != "s_Home"){
+        if ((getState(index) != "s_Mansion1")&&(getState(index) != "s_Mansion2")&&(getState(index) != "s_Mansion3")&&(getState(index) != "s_Mansion4")){
             setState(index, 2);
         }
     }
@@ -267,7 +271,7 @@ void GameEngine::plantCarrots(){
     }
 }
 void GameEngine::sleep(){
-    if(m_fields.at(m_position)==1){
+    if((m_fields.at(m_position)==11)||(m_fields.at(m_position)==12)||(m_fields.at(m_position)==13)||(m_fields.at(m_position)==14)){
     //change day to +1
         m_day++;
     emit dayChanged();

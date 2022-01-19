@@ -4,8 +4,8 @@ Rectangle {
 width: 180
 height: 60
 radius: 5
-color: "lightgray"
-border.color: "gray"
+color: "#ec9daf"
+border.color: "#f6dddd"
 Text {
     property int day: gameEngine.getDay
     id: dayCounter

@@ -76,8 +76,8 @@ private:
     std::vector<Seed*> m_seeds;
     //QList<Seed> m_seeds;
     Inventory* m_inventory;
-    int m_pumpkinSeeds=5;
-    int m_carrotSeeds=5;
+    int m_pumpkinSeeds=6;
+    int m_carrotSeeds=6;
     int m_pumpkins=0;
     int m_carrots=0;
     void shovelClicked();
@@ -89,7 +89,7 @@ private:
 int m_position = 30;
 int m_lastField=10;
 int m_day =1;
-int m_money = 0;
+int m_money = 100;
 };
 
 #endif // GAMEENGINE_H

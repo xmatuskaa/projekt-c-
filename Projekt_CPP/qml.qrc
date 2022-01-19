@@ -15,8 +15,6 @@
         <file>default.json</file>
         <file>Images/carrotfield.png</file>
         <file>Images/fieldongrass.png</file>
-        <file>Images/grass.png</file>
-        <file>Images/house.png</file>
         <file>Images/pumpkinfield.png</file>
         <file>Images/shovel.png</file>
         <file>Images/carrotseeds.png</file>
@@ -28,10 +26,24 @@
         <file>Images/carrot.png</file>
         <file>Images/pumpkin.png</file>
         <file>forSaving.xml</file>
-        <file>Images/stall.png</file>
         <file>Images/sell.png</file>
         <file>Images/lolec.png</file>
-        <file>Images/bla.jpg</file>
         <file>sell.png</file>
+        <file>Images/grass2.png</file>
+        <file>Images/mansion21.png</file>
+        <file>Images/mansion22.png</file>
+        <file>Images/mansion23.png</file>
+        <file>Images/mansion24.png</file>
+        <file>Images/fieldongrass2.png</file>
+        <file>Images/fieldpumpkin2.png</file>
+        <file>Images/pumpkin2.png</file>
+        <file>Images/carrot2.png</file>
+        <file>Images/carrotfield2.png</file>
+        <file>Images/carrotseeds2.png</file>
+        <file>Images/pumpkinseeds2.png</file>
+        <file>Images/stageone2.png</file>
+        <file>Images/stagetwo2.png</file>
+        <file>Images/market1.png</file>
+        <file>Images/market2.png</file>
     </qresource>
 </RCC>

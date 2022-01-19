@@ -6,8 +6,8 @@ Rectangle {
     width: 60
     height: 60
     radius: 5
-    color: "lightgray"
-    border.color: "gray"
+    color: "#ec9daf"
+    border.color: "#f6dddd"
     opacity: 50
 
     Image {
@@ -47,7 +47,7 @@ Rectangle {
             name: "s_PumpkinSeeds"
             PropertyChanges{
                 target: itemSlotImage
-                source: "Images/pumpkinseeds.png"
+                source: "Images/pumpkinseeds2.png"
             }
             PropertyChanges {
                 target: amount
@@ -60,7 +60,7 @@ Rectangle {
 
             PropertyChanges{
                 target: itemSlotImage
-                source: "Images/carrotseeds.png"
+                source: "Images/carrotseeds2.png"
             }
             PropertyChanges {
                 target: amount
@@ -72,7 +72,7 @@ Rectangle {
          name: "s_Pumpkin"
          PropertyChanges {
              target: itemSlotImage
-             source: "Images/pumpkin.png"
+             source: "Images/pumpkin2.png"
          }
          PropertyChanges {
              target: amount
@@ -86,7 +86,7 @@ Rectangle {
         name:"s_Carrot"
         PropertyChanges {
             target: itemSlotImage
-            source: "Images/carrot.png"
+            source: "Images/carrot2.png"
         }
         PropertyChanges {
             target: amount
