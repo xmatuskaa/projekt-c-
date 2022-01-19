@@ -8,7 +8,6 @@
 #include <vector>
 #include "filemanager.h"
 
-
 class GameEngine : public QObject
 {
         Q_OBJECT
@@ -53,8 +52,6 @@ public:
      int getPumpkin();
      int getCarrotSeeds();
      int getCarrot();
-     void saveXML();
-
 
 
 signals:
@@ -75,7 +72,7 @@ private:
     Player* m_player;
 
     std::vector<int> m_fields;
-//    FileManager* m_file;
+
     std::vector<Seed*> m_seeds;
     //QList<Seed> m_seeds;
     Inventory* m_inventory;

@@ -2,8 +2,8 @@
 
 FileManager::FileManager()
 {
-m_fileForSave = "/Users/evgeniavolkova/3 semestr/git_cpc/projekt-c-/Projekt_CPP/forSaving.xml";
-};
+
+}
 //bool FileManager::loadGame(){
 
 //};
@@ -22,8 +22,43 @@ m_fileForSave = "/Users/evgeniavolkova/3 semestr/git_cpc/projekt-c-/Projekt_CPP/
 //};
 //void FileManager::read(const QJsonObject){
 
+//};
+
+void FileManager::writeToIndex(int index, int number, QString filename){
 
 
+    QFile file(filename);
+    if (file.open(QIODevice::WriteOnly)){
+        QXmlStreamWriter writer;
+        writer.setDevice(&file);
+         writer.setAutoFormatting(true);
+        writer.writeStartDocument();
+        writer.writeStartElement("slot");
+
+
+        for (int i = 0; i < 400; i++ ){
+            if (index == i ){
+                writer.writeStartElement("field");
+                writer.writeAttribute("index",QString::number(i));
+                writer.writeCharacters(QString::number(number));
+            } else {
+
+                writer.writeStartElement("field");
+                writer.writeAttribute("index",QString::number(i));
+                writer.writeCharacters("0");
+                 writer.writeEndElement();
+            }
+
+        }
+
+
+        writer.writeEndElement();
+        writer.writeEndDocument();
+    } else {
+         qCritical() << "Soubor se nepovedlo otevritttt\n";
+    }
+file.close();
+};
 
 std::vector<int> FileManager::loadXml(){
     std::vector<int> slot(400, 0);
@@ -57,18 +92,5 @@ std::vector<int> FileManager::loadXml(){
         qCritical() << "Soubor se nepovedlo otevritttt\n";
     }
 
-
     return slot;
-};
-
-QString FileManager::getSaveFile(){
-    return m_fileForSave;
-};
-//void FileManager::setFile(std::string fileForSave){
-////    m_fileForSave = QString::fromStdString(fileForSave);
-//    m_fileForSave = "/Users/evgeniavolkova/3 semestr/git_cpc/projekt-c-/Projekt_CPP/forSaving.xml";
-//};
-
-
-
-
+}
