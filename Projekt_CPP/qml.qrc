@@ -29,5 +29,9 @@
         <file>Images/pumpkin.png</file>
         <file>forSaving.xml</file>
         <file>Images/stall.png</file>
+        <file>Images/sell.png</file>
+        <file>Images/lolec.png</file>
+        <file>Images/bla.jpg</file>
+        <file>sell.png</file>
     </qresource>
 </RCC>

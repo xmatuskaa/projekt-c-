@@ -100,7 +100,7 @@ Rectangle {
             name: "s_MarketBuy"
             PropertyChanges {
                 target: plotImage
-                source: "Images/stall.png"
+               source: "sell.png"
                  }
             }
         /*State{

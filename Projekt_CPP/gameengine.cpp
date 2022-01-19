@@ -233,7 +233,14 @@ void GameEngine::plantPumpkins(){
             emit pumpkinSeedsChanged();
         }
     }
-
+    if(m_fields.at(m_position)==10){
+        if(m_money>=15){
+           m_money -=15;
+           m_pumpkinSeeds++;
+           emit moneyChanged();
+           emit pumpkinSeedsChanged();
+        }
+    }
 }
 
 void GameEngine::plantCarrots(){
@@ -248,6 +255,14 @@ void GameEngine::plantCarrots(){
             //change from farmfield to stage one
             setState(m_position, 7);
             emit carrotSeedsChanged();
+        }
+    }
+    if(m_fields.at(m_position)==10){
+        if(m_money>=10){
+           m_money -=10;
+           m_carrotSeeds++;
+           emit moneyChanged();
+           emit carrotSeedsChanged();
         }
     }
 }
@@ -274,7 +289,7 @@ void GameEngine::sleep(){
                 }
             }
         for(int i = 0; i<400;i++){
- FileManager::writeToIndex(i, m_fields.at(i),"Users\Honza\Desktop\PROJEKT CPP LOLEC\Projekt_CPP\forSaving.xml");
+ FileManager::writeToIndex(i, m_fields.at(i),"forSaving.xml");
         }
     }
 }
